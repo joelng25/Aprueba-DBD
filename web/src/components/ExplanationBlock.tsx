@@ -41,7 +41,7 @@ export default function ExplanationBlock({ text }: { text: string }) {
           </div>
         </details>
       )}
-      <p className="ai-disclaimer">Explicació generada per IA — pot contenir errors.</p>
+      <p className="ai-disclaimer">Explicació revisada i modificada per Joel.</p>
     </div>
   );
 }
