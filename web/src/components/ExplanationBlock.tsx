@@ -15,7 +15,9 @@ export default function ExplanationBlock({ text }: { text: string }) {
 
   const detail =
     detailIdx > 0
-      ? text.slice(detailIdx, analysisIdx > detailIdx ? analysisIdx : undefined).trim()
+      ? text
+          .slice(detailIdx, analysisIdx > detailIdx ? analysisIdx : undefined)
+          .trim()
       : null;
 
   const analysis = analysisIdx > 0 ? text.slice(analysisIdx).trim() : null;
@@ -27,7 +29,9 @@ export default function ExplanationBlock({ text }: { text: string }) {
       </div>
       {detail && (
         <details>
-          <summary><strong>Explicació detallada</strong></summary>
+          <summary>
+            <strong>Explicació detallada</strong>
+          </summary>
           <div className="explanation-box__content">
             <Markdown>{stripMarker(detail, DETAIL_MARKER)}</Markdown>
           </div>
@@ -35,13 +39,17 @@ export default function ExplanationBlock({ text }: { text: string }) {
       )}
       {analysis && (
         <details>
-          <summary><strong>Anàlisi d'opcions falses</strong></summary>
+          <summary>
+            <strong>Anàlisi d'opcions falses</strong>
+          </summary>
           <div className="explanation-box__content">
             <Markdown>{stripMarker(analysis, ANALYSIS_MARKER)}</Markdown>
           </div>
         </details>
       )}
-      <p className="ai-disclaimer">Explicació revisada i modificada per Joel.</p>
+      <p className="ai-disclaimer">
+        Explicació revisada i modificada per Joel (IA).
+      </p>
     </div>
   );
 }
