@@ -17,7 +17,7 @@ const QUESTIONS_JSON_URL = "/data/questions.json";
  * transparent re-import without losing their test history
  * (user_answers, test_sessions).
  */
-const DATA_VERSION = 9;
+const DATA_VERSION = 10;
 const DATA_VERSION_KEY = "data_version";
 
 export type BootstrapResult =
@@ -71,7 +71,8 @@ export async function ensureDataLoaded(): Promise<BootstrapResult> {
       db.run("DELETE FROM topics");
     }
 
-    const res = await fetch(QUESTIONS_JSON_URL);
+    // Bust HTTP cache so an outdated questions.json is never locked in with a new DATA_VERSION.
+    const res = await fetch(`${QUESTIONS_JSON_URL}?v=${DATA_VERSION}`, { cache: "no-store" });
     if (!res.ok) {
       return { ok: false, error: `No se pudo cargar ${QUESTIONS_JSON_URL}: ${res.status}` };
     }
