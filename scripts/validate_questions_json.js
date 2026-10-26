@@ -26,12 +26,17 @@ if (!data || typeof data !== "object") {
   if (!Array.isArray(data.questions)) errors.push("questions must be array");
   else {
     const topicIds = new Set((data.topics || []).map((t) => t.id));
+    if (topicIds.size !== (data.topics || []).length) errors.push("duplicate topic IDs");
+    if (new Set(data.questions.map(q => q.id)).size !== data.questions.length) errors.push("duplicate question IDs");
+    if (new Set(data.questions.map(q => q.number)).size !== data.questions.length) errors.push("duplicate question numbers");
     data.questions.forEach((q, i) => {
       if (!q.id || typeof q.number !== "number" || !q.topicId || typeof q.text !== "string")
         errors.push(`questions[${i}]: need id, number, topicId, text`);
       if (!topicIds.has(q.topicId)) errors.push(`questions[${i}]: topicId "${q.topicId}" not in topics`);
       if (!Array.isArray(q.options)) errors.push(`questions[${i}]: options must be array`);
       else {
+        if (new Set(q.options.map(o => o.letter)).size !== q.options.length) errors.push("duplicate option letters");
+        if (!q.options.some(o => o.letter === q.correctLetter)) errors.push("correct answer must exist among options");
         q.options.forEach((o, j) => {
           if (!OPTION_LETTERS.includes(o.letter) || typeof o.text !== "string")
             errors.push(`questions[${i}].options[${j}]: need letter A-F and text`);

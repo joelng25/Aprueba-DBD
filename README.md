@@ -4,6 +4,12 @@ App web para repasar preguntas tipo test de la asignatura **Disseny de Bases de 
 
 Esta guía explica cómo mantener el contenido (añadir/editar preguntas y generar sus explicaciones) sin tener que tocar el código de la web.
 
+## Origen y aportación
+
+Este repositorio es un fork de [HugoNienhausen/Aprueba-DBD](https://github.com/HugoNienhausen/Aprueba-DBD). La base de la aplicación y el material original proceden de ese proyecto; el historial de GitHub conserva su autoría. En este fork se han añadido mejoras de instalación desde la raíz, validación de preguntas y actualización segura del contenido. Consulta la comparación entre repositorios para atribuir cambios concretos; no se reclama autoría del material original.
+
+Las actualizaciones descargan y validan primero. La sustitución de preguntas y su versión se hace en una transacción sin borrar respuestas ni sesiones. Si se elimina un ID con respuestas guardadas, la actualización se rechaza para conservar el progreso; mantén IDs estables.
+
 ## Índice
 
 1. [Estructura del proyecto](#1-estructura-del-proyecto)
@@ -154,7 +160,7 @@ El proyecto está conectado a **Vercel**, que vigila la rama `main` de este repo
 Para ver los cambios en tu ordenador antes de publicarlos:
 
 ```bash
-npm install        # solo la primera vez
+npm ci --prefix web # solo la primera vez: instala las dependencias de la web
 npm run dev
 ```
 

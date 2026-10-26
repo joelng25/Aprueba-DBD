@@ -7,9 +7,14 @@ import type { Database } from "sql.js";
 import type { QuestionsImport } from "../types";
 import { persistDb } from "./init";
 
-export async function importFromJson(db: Database, data: QuestionsImport): Promise<void> {
+export async function importFromJson(db: Database, data: QuestionsImport, version?: number): Promise<void> {
   db.run("BEGIN TRANSACTION");
   try {
+    const referenced = db.exec("SELECT DISTINCT question_id FROM user_answers");
+    const incoming = new Set(data.questions.map(q => q.id));
+    for (const row of referenced[0]?.values ?? []) {
+      if (!incoming.has(String(row[0]))) throw new Error("La actualización elimina preguntas con progreso guardado; conserva sus IDs.");
+    }
     db.run("DELETE FROM questions");
     db.run("DELETE FROM topics");
 
@@ -38,10 +43,12 @@ export async function importFromJson(db: Database, data: QuestionsImport): Promi
     }
     insertQuestion.free();
 
+    if (version !== undefined) db.run("INSERT OR REPLACE INTO user_preferences (key, value) VALUES (?, ?)", ["data_version", String(version)]);
     db.run("COMMIT");
-    await persistDb();
+
   } catch (e) {
     db.run("ROLLBACK");
     throw e;
   }
+  await persistDb();
 }

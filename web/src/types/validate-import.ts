@@ -30,6 +30,9 @@ export function validateQuestionsImport(data: unknown): data is QuestionsImport 
   }
 
   const topicIds = new Set(topics.map((t) => t.id));
+  assert(topicIds.size === topics.length, "duplicate topic IDs");
+  assert(new Set(questions.map(q => q.id)).size === questions.length, "duplicate question IDs");
+  assert(new Set(questions.map(q => q.number)).size === questions.length, "duplicate question numbers");
 
   for (let i = 0; i < questions.length; i++) {
     const q = questions[i] as unknown as Record<string, unknown>;
@@ -43,6 +46,9 @@ export function validateQuestionsImport(data: unknown): data is QuestionsImport 
       assert(OPTION_LETTERS.includes(o.letter), `questions[${i}].options[].letter in A-F`);
       assert(typeof o.text === "string", `questions[${i}].options[].text`);
     }
+    const options = q.options as QuestionOption[];
+    assert(new Set(options.map(o => o.letter)).size === options.length, "duplicate option letters");
+    assert(options.some(o => o.letter === q.correctLetter), "correct answer must exist among options");
     assert(OPTION_LETTERS.includes(q.correctLetter as (typeof OPTION_LETTERS)[number]), `questions[${i}].correctLetter`);
     assert(q.explicacion === null || typeof q.explicacion === "string", `questions[${i}].explicacion`);
   }

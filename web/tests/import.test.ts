@@ -1,0 +1,9 @@
+import {test,expect,mock} from 'bun:test';
+import initSqlJs from 'sql.js';
+mock.module('../src/db/init',()=>({persistDb:async()=>{}}));
+const {importFromJson}=await import('../src/db/import');
+const SQL=await initSqlJs();
+const data=()=>({topics:[{id:'t',title:'Topic',section:'S',sortOrder:1}],questions:[{id:'q',number:1,topicId:'t',text:'New',options:[{letter:'A' as const,text:'Yes'}],correctLetter:'A' as const,explicacion:null}]});
+function db(){const d=new SQL.Database();d.run('CREATE TABLE topics(id TEXT PRIMARY KEY,title TEXT,section TEXT,sort_order INT);CREATE TABLE questions(id TEXT PRIMARY KEY,number INT UNIQUE,topic_id TEXT,text TEXT,options TEXT,correct_letter TEXT,explicacion TEXT);CREATE TABLE user_answers(question_id TEXT);CREATE TABLE test_sessions(id TEXT);CREATE TABLE user_preferences(key TEXT PRIMARY KEY,value TEXT)');return d;}
+test('refresh preserves answers sessions and version',async()=>{const d=db();await importFromJson(d,data(),1);d.run("INSERT INTO user_answers VALUES('q');INSERT INTO test_sessions VALUES('s')");await importFromJson(d,data(),2);expect(d.exec('SELECT question_id FROM user_answers')[0].values).toEqual([['q']]);expect(d.exec('SELECT id FROM test_sessions')[0].values).toEqual([['s']]);expect(d.exec("SELECT value FROM user_preferences WHERE key='data_version'")[0].values).toEqual([['2']]);});
+test('removed answered question rejects refresh and preserves data',async()=>{const d=db();await importFromJson(d,data(),1);d.run("INSERT INTO user_answers VALUES('q')");const next=data();next.questions[0].id='other';await expect(importFromJson(d,next,2)).rejects.toThrow('progreso');expect(d.exec('SELECT id FROM questions')[0].values).toEqual([['q']]);expect(d.exec("SELECT value FROM user_preferences WHERE key='data_version'")[0].values).toEqual([['1']]);});

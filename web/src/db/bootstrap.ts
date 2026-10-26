@@ -17,7 +17,7 @@ const QUESTIONS_JSON_URL = "/data/questions.json";
  * transparent re-import without losing their test history
  * (user_answers, test_sessions).
  */
-const DATA_VERSION = 10;
+const DATA_VERSION = 8;
 const DATA_VERSION_KEY = "data_version";
 
 export type BootstrapResult =
@@ -39,13 +39,6 @@ function getStoredVersion(db: import("sql.js").Database): number {
   return 0;
 }
 
-function setStoredVersion(db: import("sql.js").Database, version: number): void {
-  db.run(
-    "INSERT OR REPLACE INTO user_preferences (key, value) VALUES (?, ?)",
-    [DATA_VERSION_KEY, String(version)]
-  );
-}
-
 /**
  * Ensures the DB has topics and questions. If empty or outdated,
  * fetches questions JSON and re-imports. Preserves user history.
@@ -65,14 +58,7 @@ export async function ensureDataLoaded(): Promise<BootstrapResult> {
       return { ok: true, imported: false, topicCount: topics.length, questionCount };
     }
 
-    // Clear old question data (keep user history)
-    if (needsUpdate && topics.length > 0) {
-      db.run("DELETE FROM questions");
-      db.run("DELETE FROM topics");
-    }
-
-    // Bust HTTP cache so an outdated questions.json is never locked in with a new DATA_VERSION.
-    const res = await fetch(`${QUESTIONS_JSON_URL}?v=${DATA_VERSION}`, { cache: "no-store" });
+    const res = await fetch(QUESTIONS_JSON_URL);
     if (!res.ok) {
       return { ok: false, error: `No se pudo cargar ${QUESTIONS_JSON_URL}: ${res.status}` };
     }
@@ -81,8 +67,7 @@ export async function ensureDataLoaded(): Promise<BootstrapResult> {
       return { ok: false, error: "El JSON de preguntas no tiene la estructura esperada." };
     }
 
-    await importFromJson(db, data as QuestionsImport);
-    setStoredVersion(db, DATA_VERSION);
+    await importFromJson(db, data as QuestionsImport, DATA_VERSION);
 
     const topicsAfter = await getTopics();
     const stmt = db.prepare("SELECT COUNT(*) FROM questions");
