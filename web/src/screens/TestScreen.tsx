@@ -25,6 +25,7 @@ type TestMode = TestSessionMode;
 type TestKind = "by_selection" | "failed" | "unanswered";
 
 const QUESTION_COUNT_OPTIONS = [10, 15, 20, 25, 30, 50] as const;
+const ALL_QUESTIONS = 0;
 
 function groupBySection(topics: Topic[]): { section: string; topics: Topic[] }[] {
   const bySection = new Map<string, Topic[]>();
@@ -125,7 +126,7 @@ export default function TestScreen() {
           autoStartRef.current = true;
           if (repeatState.kind) setKind(repeatState.kind);
           if (repeatState.selectedTopicIds) setSelectedTopicIds(repeatState.selectedTopicIds);
-          if (repeatState.questionCount) setQuestionCount(repeatState.questionCount);
+          if (repeatState.questionCount !== undefined) setQuestionCount(repeatState.questionCount);
         }
       })
       .catch(() => {})
@@ -152,7 +153,7 @@ export default function TestScreen() {
     const prefs = await getPreferences();
     setCorrectAt(prefs.correctAt);
 
-    const n = Math.max(1, questionCount);
+    const n = questionCount === ALL_QUESTIONS ? Number.POSITIVE_INFINITY : Math.max(1, questionCount);
     let qs: Question[] = [];
     const mode: TestMode = kind === "failed" ? "failed" : "by_topic";
 
@@ -430,7 +431,12 @@ export default function TestScreen() {
         <button
           type="button"
           className={`test-option ${kind === "failed" ? "test-option--active" : ""} ${(failedCount ?? 0) === 0 ? "test-option--disabled" : ""}`}
-          onClick={() => (failedCount ?? 0) > 0 && setKind("failed")}
+          onClick={() => {
+            if ((failedCount ?? 0) > 0) {
+              setKind("failed");
+              if (questionCount === ALL_QUESTIONS) setQuestionCount(20);
+            }
+          }}
           disabled={(failedCount ?? 0) === 0}
         >
           <span className="test-option__radio" />
@@ -439,7 +445,7 @@ export default function TestScreen() {
             <span className="test-option__desc">
               {(failedCount ?? 0) === 0
                 ? "Fes un test abans per tenir errors"
-                : `${Math.min(failedCount!, questionCount)} per repassar`}
+                : `${questionCount === ALL_QUESTIONS ? failedCount : Math.min(failedCount!, questionCount)} per repassar`}
             </span>
             {(failedCount ?? 0) > 0 && kind === "failed" && (
               <Link to="/review/failed" className="link-plain test-option__inline-link" onClick={(e) => e.stopPropagation()}>Repassar en ordre →</Link>
@@ -450,7 +456,12 @@ export default function TestScreen() {
         <button
           type="button"
           className={`test-option ${kind === "unanswered" ? "test-option--active" : ""} ${(unansweredCount ?? 0) === 0 ? "test-option--disabled" : ""}`}
-          onClick={() => (unansweredCount ?? 0) > 0 && setKind("unanswered")}
+          onClick={() => {
+            if ((unansweredCount ?? 0) > 0) {
+              setKind("unanswered");
+              if (questionCount === ALL_QUESTIONS) setQuestionCount(20);
+            }
+          }}
           disabled={(unansweredCount ?? 0) === 0}
         >
           <span className="test-option__radio" />
@@ -537,6 +548,9 @@ export default function TestScreen() {
             {QUESTION_COUNT_OPTIONS.map((num) => (
               <option key={num} value={num}>{num}</option>
             ))}
+            {kind === "by_selection" && (
+              <option value={ALL_QUESTIONS}>Totes les dels temes seleccionats</option>
+            )}
           </select>
         </label>
       </div>
