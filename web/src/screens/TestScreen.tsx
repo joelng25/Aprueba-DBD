@@ -27,7 +27,9 @@ type TestKind = "by_selection" | "failed" | "unanswered";
 const QUESTION_COUNT_OPTIONS = [10, 15, 20, 25, 30, 50] as const;
 const ALL_QUESTIONS = 0;
 
-function groupBySection(topics: Topic[]): { section: string; topics: Topic[] }[] {
+function groupBySection(
+  topics: Topic[],
+): { section: string; topics: Topic[] }[] {
   const bySection = new Map<string, Topic[]>();
   for (const t of topics) {
     const list = bySection.get(t.section) ?? [];
@@ -64,19 +66,28 @@ interface AnswerRecord {
 export default function TestScreen() {
   const navigate = useNavigate();
   const location = useLocation();
-  const repeatState = location.state as { autoStart?: boolean; kind?: TestKind; selectedTopicIds?: string[]; questionCount?: number } | null;
+  const repeatState = location.state as {
+    autoStart?: boolean;
+    kind?: TestKind;
+    selectedTopicIds?: string[];
+    questionCount?: number;
+  } | null;
   const autoStartRef = useRef(false);
   const [phase, setPhase] = useState<Phase>("config");
   const [topics, setTopics] = useState<Topic[]>([]);
   const [failedCount, setFailedCount] = useState<number | null>(null);
   const [unansweredCount, setUnansweredCount] = useState<number | null>(null);
-  const [unansweredByTopic, setUnansweredByTopic] = useState<Record<string, number>>({});
+  const [unansweredByTopic, setUnansweredByTopic] = useState<
+    Record<string, number>
+  >({});
   const [unansweredTopicIds, setUnansweredTopicIds] = useState<string[]>([]);
   const [kind, setKind] = useState<TestKind>("by_selection");
   const [selectedTopicIds, setSelectedTopicIds] = useState<string[]>(() => {
     try {
       return JSON.parse(localStorage.getItem("test-selected-topics") ?? "[]");
-    } catch { return []; }
+    } catch {
+      return [];
+    }
   });
   const [questionCount, setQuestionCount] = useState<number>(0);
   const [flashMode, setFlashMode] = useState(false);
@@ -86,7 +97,10 @@ export default function TestScreen() {
 
   useEffect(() => {
     if (selectedTopicIds.length > 0) {
-      localStorage.setItem("test-selected-topics", JSON.stringify(selectedTopicIds));
+      localStorage.setItem(
+        "test-selected-topics",
+        JSON.stringify(selectedTopicIds),
+      );
     } else {
       localStorage.removeItem("test-selected-topics");
     }
@@ -94,28 +108,42 @@ export default function TestScreen() {
 
   const toggleTopic = (topicId: string) => {
     setSelectedTopicIds((prev) =>
-      prev.includes(topicId) ? prev.filter((id) => id !== topicId) : [...prev, topicId]
+      prev.includes(topicId)
+        ? prev.filter((id) => id !== topicId)
+        : [...prev, topicId],
     );
   };
 
   const toggleSection = (section: string) => {
-    const sectionTopics = sectionsWithTopics.find((s) => s.section === section)?.topics ?? [];
+    const sectionTopics =
+      sectionsWithTopics.find((s) => s.section === section)?.topics ?? [];
     const ids = sectionTopics.map((t) => t.id);
     const allSelected = ids.every((id) => selectedTopicIds.includes(id));
     setSelectedTopicIds((prev) =>
-      allSelected ? prev.filter((id) => !ids.includes(id)) : [...new Set([...prev, ...ids])]
+      allSelected
+        ? prev.filter((id) => !ids.includes(id))
+        : [...new Set([...prev, ...ids])],
     );
   };
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [sessionId, setSessionId] = useState<string | null>(null);
-  const [correctAt, setCorrectAt] = useState<"immediately" | "at_end">("immediately");
+  const [correctAt, setCorrectAt] = useState<"immediately" | "at_end">(
+    "immediately",
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedLetter, setSelectedLetter] = useState<OptionLetter | null>(null);
+  const [selectedLetter, setSelectedLetter] = useState<OptionLetter | null>(
+    null,
+  );
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
 
   useEffect(() => {
-    Promise.all([getTopics(), getFailedQuestionIds(), getUnansweredQuestionIds(), getUnansweredCountByTopic()])
+    Promise.all([
+      getTopics(),
+      getFailedQuestionIds(),
+      getUnansweredQuestionIds(),
+      getUnansweredCountByTopic(),
+    ])
       .then(([t, failedIds, unansweredIds, byTopic]) => {
         setTopics(t);
         setFailedCount(failedIds.length);
@@ -125,8 +153,10 @@ export default function TestScreen() {
         if (repeatState?.autoStart && !autoStartRef.current) {
           autoStartRef.current = true;
           if (repeatState.kind) setKind(repeatState.kind);
-          if (repeatState.selectedTopicIds) setSelectedTopicIds(repeatState.selectedTopicIds);
-          if (repeatState.questionCount !== undefined) setQuestionCount(repeatState.questionCount);
+          if (repeatState.selectedTopicIds)
+            setSelectedTopicIds(repeatState.selectedTopicIds);
+          if (repeatState.questionCount !== undefined)
+            setQuestionCount(repeatState.questionCount);
         }
       })
       .catch(() => {})
@@ -144,33 +174,48 @@ export default function TestScreen() {
     if (kind === "by_selection" && selectedTopicIds.length === 0) return;
     if (kind === "failed" && (failedCount ?? 0) === 0) return;
     if (kind === "unanswered") {
-      const effectiveCount = unansweredTopicIds.length > 0
-        ? unansweredTopicIds.reduce((sum, id) => sum + (unansweredByTopic[id] ?? 0), 0)
-        : (unansweredCount ?? 0);
+      const effectiveCount =
+        unansweredTopicIds.length > 0
+          ? unansweredTopicIds.reduce(
+              (sum, id) => sum + (unansweredByTopic[id] ?? 0),
+              0,
+            )
+          : (unansweredCount ?? 0);
       if (effectiveCount === 0) return;
     }
 
     const prefs = await getPreferences();
     setCorrectAt(prefs.correctAt);
 
-    const n = questionCount === ALL_QUESTIONS ? Number.POSITIVE_INFINITY : Math.max(1, questionCount);
+    const n =
+      questionCount === ALL_QUESTIONS
+        ? Number.POSITIVE_INFINITY
+        : Math.max(1, questionCount);
     let qs: Question[] = [];
     const mode: TestMode = kind === "failed" ? "failed" : "by_topic";
 
     if (kind === "by_selection") {
-      const byTopic = await Promise.all(selectedTopicIds.map((id) => getQuestionsByTopicId(id)));
+      const byTopic = await Promise.all(
+        selectedTopicIds.map((id) => getQuestionsByTopicId(id)),
+      );
       const merged = byTopic.flat().sort((a, b) => a.number - b.number);
       const unique = Array.from(new Map(merged.map((q) => [q.id, q])).values());
       qs = shuffle(unique).slice(0, n);
     } else if (kind === "unanswered") {
-      const ids = await getUnansweredQuestionIds(unansweredTopicIds.length > 0 ? unansweredTopicIds : undefined);
+      const ids = await getUnansweredQuestionIds(
+        unansweredTopicIds.length > 0 ? unansweredTopicIds : undefined,
+      );
       const limited = shuffle(ids).slice(0, n);
-      const resolved = await Promise.all(limited.map((id) => getQuestionById(id)));
+      const resolved = await Promise.all(
+        limited.map((id) => getQuestionById(id)),
+      );
       qs = resolved.filter((q): q is Question => q != null);
     } else {
       const ids = await getFailedQuestionIds();
       const limited = ids.slice(0, n);
-      const resolved = await Promise.all(limited.map((id) => getQuestionById(id)));
+      const resolved = await Promise.all(
+        limited.map((id) => getQuestionById(id)),
+      );
       qs = resolved.filter((q): q is Question => q != null);
     }
 
@@ -202,7 +247,11 @@ export default function TestScreen() {
     // Prevent changing an already-answered question
     if (answers.some((a) => a.questionId === question.id)) return;
     const isCorrect = letter === question.correctLetter;
-    const newAnswer: AnswerRecord = { questionId: question.id, selectedLetter: letter, isCorrect };
+    const newAnswer: AnswerRecord = {
+      questionId: question.id,
+      selectedLetter: letter,
+      isCorrect,
+    };
     const newAnswers = [...answers, newAnswer];
     setSelectedLetter(letter);
     setAnswers(newAnswers);
@@ -230,7 +279,9 @@ export default function TestScreen() {
   const goNext = () => {
     if (currentIndex >= questions.length - 1) return;
     const nextIndex = currentIndex + 1;
-    const existing = answers.find((a) => a.questionId === questions[nextIndex]?.id);
+    const existing = answers.find(
+      (a) => a.questionId === questions[nextIndex]?.id,
+    );
     setCurrentIndex(nextIndex);
     setSelectedLetter(existing?.selectedLetter ?? null);
   };
@@ -238,7 +289,9 @@ export default function TestScreen() {
   const goPrev = () => {
     if (currentIndex <= 0) return;
     const prevIndex = currentIndex - 1;
-    const existing = answers.find((a) => a.questionId === questions[prevIndex]?.id);
+    const existing = answers.find(
+      (a) => a.questionId === questions[prevIndex]?.id,
+    );
     setCurrentIndex(prevIndex);
     setSelectedLetter(existing?.selectedLetter ?? null);
   };
@@ -265,7 +318,13 @@ export default function TestScreen() {
     });
     const allAnswerItems = allAnswers.map((a) => {
       const q = questions.find((x) => x.id === a.questionId)!;
-      return { question: q, selectedLetter: a.selectedLetter, correctLetter: q.correctLetter, explicacion: q.explicacion, isCorrect: a.isCorrect };
+      return {
+        question: q,
+        selectedLetter: a.selectedLetter,
+        correctLetter: q.correctLetter,
+        explicacion: q.explicacion,
+        isCorrect: a.isCorrect,
+      };
     });
     navigate("/result", {
       state: {
@@ -281,7 +340,7 @@ export default function TestScreen() {
     const question = questions[currentIndex]!;
     const answered = selectedLetter !== null;
     const allAnswered = answers.length >= questions.length;
-    const progress = ((answers.length) / questions.length) * 100;
+    const progress = (answers.length / questions.length) * 100;
     const correctSoFar = answers.filter((a) => a.isCorrect).length;
     const wrongSoFar = answers.length - correctSoFar;
 
@@ -289,12 +348,21 @@ export default function TestScreen() {
       return (
         <div className="test-running test-running--flash">
           <div className="test-progress">
-            <div className="test-progress__bar" style={{ width: `${progress}%` }} />
+            <div
+              className="test-progress__bar"
+              style={{ width: `${progress}%` }}
+            />
           </div>
           <div className="flash-header">
-            <span className="flash-counter flash-counter--correct">✓ {correctSoFar}</span>
-            <span className="flash-counter flash-counter--wrong">✗ {wrongSoFar}</span>
-            <span className="muted">{answers.length} / {questions.length}</span>
+            <span className="flash-counter flash-counter--correct">
+              ✓ {correctSoFar}
+            </span>
+            <span className="flash-counter flash-counter--wrong">
+              ✗ {wrongSoFar}
+            </span>
+            <span className="muted">
+              {answers.length} / {questions.length}
+            </span>
           </div>
 
           <QuestionCard
@@ -306,7 +374,13 @@ export default function TestScreen() {
             hideExplanation
           />
           <p className="mt-2">
-            <button type="button" className="link-plain" onClick={() => setPhase("config")}>← Sortir del test</button>
+            <button
+              type="button"
+              className="link-plain"
+              onClick={() => setPhase("config")}
+            >
+              ← Sortir del test
+            </button>
           </p>
         </div>
       );
@@ -315,14 +389,23 @@ export default function TestScreen() {
     return (
       <div className="test-running">
         <div className="test-progress">
-          <div className="test-progress__bar" style={{ width: `${progress}%` }} />
+          <div
+            className="test-progress__bar"
+            style={{ width: `${progress}%` }}
+          />
         </div>
         <p className="test-progress__label">
-          Pregunta {currentIndex + 1} de {questions.length} · {answers.length} respostes
+          Pregunta {currentIndex + 1} de {questions.length} · {answers.length}{" "}
+          respostes
           {correctAt === "at_end" && " · Veuràs les respostes al final"}
         </p>
 
-        <Jumper total={questions.length} current={currentIndex} onJump={goTo} getState={getJumperState} />
+        <Jumper
+          total={questions.length}
+          current={currentIndex}
+          onJump={goTo}
+          getState={getJumperState}
+        />
 
         <QuestionCard
           question={question}
@@ -334,23 +417,41 @@ export default function TestScreen() {
 
         <div className="nav-questions">
           {currentIndex > 0 && (
-            <button type="button" className="btn btn--secondary btn--large" onClick={goPrev}>
+            <button
+              type="button"
+              className="btn btn--secondary btn--large"
+              onClick={goPrev}
+            >
               ← Anterior
             </button>
           )}
           {currentIndex < questions.length - 1 && (
-            <button type="button" className="btn btn--secondary btn--large" onClick={goNext}>
+            <button
+              type="button"
+              className="btn btn--secondary btn--large"
+              onClick={goNext}
+            >
               Següent →
             </button>
           )}
           {allAnswered && (
-            <button type="button" className="btn btn--primary btn--large" onClick={() => finishTest(answers)}>
+            <button
+              type="button"
+              className="btn btn--primary btn--large"
+              onClick={() => finishTest(answers)}
+            >
               Veure resultat
             </button>
           )}
         </div>
         <p className="mt-2">
-          <button type="button" className="link-plain" onClick={() => setPhase("config")}>← Sortir del test</button>
+          <button
+            type="button"
+            className="link-plain"
+            onClick={() => setPhase("config")}
+          >
+            ← Sortir del test
+          </button>
         </p>
       </div>
     );
@@ -367,7 +468,8 @@ export default function TestScreen() {
     <div className="test-config">
       <h1 className="page-title">Fer test</h1>
       <p className="test-config__intro muted">
-        Tria una opció i el nombre de preguntes. Si hi ha menys preguntes a la selecció, s'usaran totes.
+        Tria una opció i el nombre de preguntes. Si hi ha menys preguntes a la
+        selecció, s'usaran totes.
       </p>
 
       <div className="test-options">
@@ -379,7 +481,9 @@ export default function TestScreen() {
           <span className="test-option__radio" />
           <div>
             <span className="test-option__title">Aleatori per temes</span>
-            <span className="test-option__desc">Tria els temes o subtemes que vulguis practicar</span>
+            <span className="test-option__desc">
+              Tria els temes o subtemes que vulguis practicar
+            </span>
           </div>
         </button>
         {kind === "by_selection" && (
@@ -395,7 +499,9 @@ export default function TestScreen() {
             )}
             {sectionsWithTopics.map(({ section, topics: sectionTopics }) => {
               const ids = sectionTopics.map((t) => t.id);
-              const allInSection = ids.every((id) => selectedTopicIds.includes(id));
+              const allInSection = ids.every((id) =>
+                selectedTopicIds.includes(id),
+              );
               return (
                 <div key={section} className="test-selection__section">
                   <label className="test-selection__section-header">
@@ -405,7 +511,9 @@ export default function TestScreen() {
                       onChange={() => toggleSection(section)}
                       className="test-selection__checkbox"
                     />
-                    <span className="test-selection__section-title">{section}</span>
+                    <span className="test-selection__section-title">
+                      {section}
+                    </span>
                   </label>
                   <ul className="test-selection__list">
                     {sectionTopics.map((t) => (
@@ -434,7 +542,7 @@ export default function TestScreen() {
           onClick={() => {
             if ((failedCount ?? 0) > 0) {
               setKind("failed");
-              if (questionCount === ALL_QUESTIONS) setQuestionCount(20);
+              if (questionCount === ALL_QUESTIONS) setQuestionCount(0);
             }
           }}
           disabled={(failedCount ?? 0) === 0}
@@ -448,7 +556,13 @@ export default function TestScreen() {
                 : `${questionCount === ALL_QUESTIONS ? failedCount : Math.min(failedCount!, questionCount)} per repassar`}
             </span>
             {(failedCount ?? 0) > 0 && kind === "failed" && (
-              <Link to="/review/failed" className="link-plain test-option__inline-link" onClick={(e) => e.stopPropagation()}>Repassar en ordre →</Link>
+              <Link
+                to="/review/failed"
+                className="link-plain test-option__inline-link"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Repassar en ordre →
+              </Link>
             )}
           </div>
         </button>
@@ -459,7 +573,7 @@ export default function TestScreen() {
           onClick={() => {
             if ((unansweredCount ?? 0) > 0) {
               setKind("unanswered");
-              if (questionCount === ALL_QUESTIONS) setQuestionCount(20);
+              if (questionCount === ALL_QUESTIONS) setQuestionCount(0);
             }
           }}
           disabled={(unansweredCount ?? 0) === 0}
@@ -486,10 +600,17 @@ export default function TestScreen() {
               </button>
             )}
             {sectionsWithTopics.map(({ section, topics: sectionTopics }) => {
-              const sectionUnanswered = sectionTopics.reduce((sum, t) => sum + (unansweredByTopic[t.id] ?? 0), 0);
+              const sectionUnanswered = sectionTopics.reduce(
+                (sum, t) => sum + (unansweredByTopic[t.id] ?? 0),
+                0,
+              );
               if (sectionUnanswered === 0) return null;
-              const ids = sectionTopics.filter((t) => (unansweredByTopic[t.id] ?? 0) > 0).map((t) => t.id);
-              const allInSection = ids.every((id) => unansweredTopicIds.includes(id));
+              const ids = sectionTopics
+                .filter((t) => (unansweredByTopic[t.id] ?? 0) > 0)
+                .map((t) => t.id);
+              const allInSection = ids.every((id) =>
+                unansweredTopicIds.includes(id),
+              );
               return (
                 <div key={section} className="test-selection__section">
                   <label className="test-selection__section-header">
@@ -498,13 +619,22 @@ export default function TestScreen() {
                       checked={allInSection}
                       onChange={() => {
                         setUnansweredTopicIds((prev) =>
-                          allInSection ? prev.filter((id) => !ids.includes(id)) : [...new Set([...prev, ...ids])]
+                          allInSection
+                            ? prev.filter((id) => !ids.includes(id))
+                            : [...new Set([...prev, ...ids])],
                         );
                       }}
                       className="test-selection__checkbox"
                     />
-                    <span className="test-selection__section-title">{section}</span>
-                    <span className="muted" style={{ marginLeft: "0.5rem", fontSize: "0.8rem" }}>({sectionUnanswered})</span>
+                    <span className="test-selection__section-title">
+                      {section}
+                    </span>
+                    <span
+                      className="muted"
+                      style={{ marginLeft: "0.5rem", fontSize: "0.8rem" }}
+                    >
+                      ({sectionUnanswered})
+                    </span>
                   </label>
                   <ul className="test-selection__list">
                     {sectionTopics.map((t) => {
@@ -518,13 +648,23 @@ export default function TestScreen() {
                               checked={unansweredTopicIds.includes(t.id)}
                               onChange={() => {
                                 setUnansweredTopicIds((prev) =>
-                                  prev.includes(t.id) ? prev.filter((id) => id !== t.id) : [...prev, t.id]
+                                  prev.includes(t.id)
+                                    ? prev.filter((id) => id !== t.id)
+                                    : [...prev, t.id],
                                 );
                               }}
                               className="test-selection__checkbox"
                             />
                             <span>{t.title}</span>
-                            <span className="muted" style={{ marginLeft: "0.35rem", fontSize: "0.8rem" }}>({count})</span>
+                            <span
+                              className="muted"
+                              style={{
+                                marginLeft: "0.35rem",
+                                fontSize: "0.8rem",
+                              }}
+                            >
+                              ({count})
+                            </span>
                           </label>
                         </li>
                       );
@@ -546,10 +686,14 @@ export default function TestScreen() {
             className="test-option__select"
           >
             {QUESTION_COUNT_OPTIONS.map((num) => (
-              <option key={num} value={num}>{num}</option>
+              <option key={num} value={num}>
+                {num}
+              </option>
             ))}
             {kind === "by_selection" && (
-              <option value={ALL_QUESTIONS}>Totes les dels temes seleccionats</option>
+              <option value={ALL_QUESTIONS}>
+                Totes les dels temes seleccionats
+              </option>
             )}
           </select>
         </label>
@@ -563,7 +707,12 @@ export default function TestScreen() {
             onChange={(e) => setFlashMode(e.target.checked)}
           />
           <span>⚡ Mode Flash</span>
-          <span className="muted" style={{ fontSize: "0.8rem", marginLeft: "0.35rem" }}>sense explicacions, resposta ràpida</span>
+          <span
+            className="muted"
+            style={{ fontSize: "0.8rem", marginLeft: "0.35rem" }}
+          >
+            sense explicacions, resposta ràpida
+          </span>
         </label>
       </div>
 
