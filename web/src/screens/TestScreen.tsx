@@ -542,7 +542,7 @@ export default function TestScreen() {
           onClick={() => {
             if ((failedCount ?? 0) > 0) {
               setKind("failed");
-              if (questionCount === ALL_QUESTIONS) setQuestionCount(0);
+              if (questionCount === ALL_QUESTIONS) setQuestionCount(50);
             }
           }}
           disabled={(failedCount ?? 0) === 0}
@@ -573,7 +573,7 @@ export default function TestScreen() {
           onClick={() => {
             if ((unansweredCount ?? 0) > 0) {
               setKind("unanswered");
-              if (questionCount === ALL_QUESTIONS) setQuestionCount(0);
+              if (questionCount === ALL_QUESTIONS) setQuestionCount(50);
             }
           }}
           disabled={(unansweredCount ?? 0) === 0}
