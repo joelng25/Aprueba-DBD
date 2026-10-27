@@ -149,7 +149,7 @@ export default function Layout() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/hugonienhausen/"
+            href="https://www.linkedin.com/in/joel-novio/"
             target="_blank"
             rel="noopener noreferrer"
             className="app-footer__link"
