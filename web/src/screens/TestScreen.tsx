@@ -78,7 +78,7 @@ export default function TestScreen() {
       return JSON.parse(localStorage.getItem("test-selected-topics") ?? "[]");
     } catch { return []; }
   });
-  const [questionCount, setQuestionCount] = useState<number>(20);
+  const [questionCount, setQuestionCount] = useState<number>(0);
   const [flashMode, setFlashMode] = useState(false);
   const [loading, setLoading] = useState(true);
 
