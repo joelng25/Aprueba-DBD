@@ -4,6 +4,7 @@
 
 import ExplanationBlock from "./ExplanationBlock";
 import type { Question, OptionLetter } from "../types";
+import { useMemo } from "react";
 
 interface QuestionCardProps {
   question: Question;
@@ -27,6 +28,15 @@ function getOptionState(
   return undefined;
 }
 
+function shuffleOptions<T>(options: T[]): T[] {
+  const shuffled = [...options];
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export default function QuestionCard({
   question,
   selectedLetter,
@@ -37,6 +47,10 @@ export default function QuestionCard({
 }: QuestionCardProps) {
   const answered = selectedLetter !== null;
   const showFeedback = showCorrectAnswer && answered;
+  const options = useMemo(
+    () => shuffleOptions(question.options),
+    [question.id, question.options]
+  );
 
   return (
     <div className="question-card">
@@ -44,7 +58,7 @@ export default function QuestionCard({
         Pregunta {question.number}. {question.text}
       </p>
       <ul className="options-list">
-        {question.options.map((opt) => {
+        {options.map((opt) => {
           const state = getOptionState(opt.letter, selectedLetter, question.correctLetter, showFeedback);
           const isCorrect = state === "correct";
           const showWrong = state === "wrong";

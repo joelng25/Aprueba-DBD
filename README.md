@@ -4,6 +4,8 @@ App web para repasar preguntas tipo test de la asignatura **Disseny de Bases de 
 
 Esta guía explica cómo mantener el contenido (añadir/editar preguntas y generar sus explicaciones) sin tener que tocar el código de la web.
 
+La web muestra las opciones de respuesta en un orden aleatorio para cada pregunta; sus letras y la respuesta correcta se conservan para corregirlas correctamente.
+
 ## Origen y aportación
 
 Este repositorio es un fork de [HugoNienhausen/Aprueba-DBD](https://github.com/HugoNienhausen/Aprueba-DBD). La base de la aplicación y el material original proceden de ese proyecto; el historial de GitHub conserva su autoría. En este fork se han añadido mejoras de instalación desde la raíz, validación de preguntas y actualización segura del contenido. Consulta la comparación entre repositorios para atribuir cambios concretos; no se reclama autoría del material original.
