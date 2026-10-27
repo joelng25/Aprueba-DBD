@@ -6,7 +6,7 @@
 export type CorrectAt = "immediately" | "at_end";
 export type Theme = "light" | "dark";
 export type TestSessionMode = "random" | "by_topic" | "failed";
-export type OptionLetter = "A" | "B" | "C" | "D" | "E" | "F";
+export type OptionLetter = "A" | "B" | "C" | "D" | "E" | "F" | "G";
 
 export interface Topic {
   id: string;

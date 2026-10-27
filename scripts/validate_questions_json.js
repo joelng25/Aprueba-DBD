@@ -10,7 +10,7 @@ const repoRoot = path.resolve(__dirname, "..");
 const jsonPath = path.join(repoRoot, "data", "questions.json");
 
 const data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
-const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F"];
+const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F", "G"];
 const errors = [];
 
 if (!data || typeof data !== "object") {

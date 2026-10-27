@@ -6,7 +6,7 @@
 
 import type { QuestionsImport, Topic, Question, QuestionOption } from "./index";
 
-const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F"] as const;
+const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F", "G"] as const;
 
 function assert(condition: boolean, msg: string): void {
   if (!condition) throw new Error(msg);
@@ -43,7 +43,7 @@ export function validateQuestionsImport(data: unknown): data is QuestionsImport 
     assert(typeof q.text === "string", `questions[${i}].text`);
     assert(Array.isArray(q.options), `questions[${i}].options`);
     for (const o of q.options as QuestionOption[]) {
-      assert(OPTION_LETTERS.includes(o.letter), `questions[${i}].options[].letter in A-F`);
+      assert(OPTION_LETTERS.includes(o.letter), `questions[${i}].options[].letter in A-G`);
       assert(typeof o.text === "string", `questions[${i}].options[].text`);
     }
     const options = q.options as QuestionOption[];

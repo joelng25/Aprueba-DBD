@@ -592,7 +592,7 @@
       "id": "q_6",
       "number": 6,
       "topicId": "0.1",
-      "text": "¿A quin dels subsistemes d’una organització dona support el subsistema d’informació?",
+      "text": "¿A quin dels subsistemes d’una organització dona suport el subsistema d’informació?",
       "options": [
         {
           "letter": "A",
@@ -618,7 +618,7 @@
       "id": "q_7",
       "number": 7,
       "topicId": "0.2",
-      "text": "¿Quin és un tipus sistema d'informació operacional?",
+      "text": "¿Quin és un tipus de sistema d'informació operacional?",
       "options": [
         {
           "letter": "A",
@@ -1214,7 +1214,7 @@
       "id": "q_35",
       "number": 35,
       "topicId": "1.3",
-      "text": "Un atribut d’una classe, es pot representar també mitjan¸ cant una associació d’aquesta amb una segona classe.",
+      "text": "Un atribut d’una classe es pot representar també mitjançant una associació d’aquesta amb una segona classe.",
       "options": [
         {
           "letter": "A",
@@ -1304,7 +1304,7 @@
       "id": "q_40",
       "number": 40,
       "topicId": "1.4",
-      "text": "Utilitzar un zero és equivalent a utilitzar un valornull, sempre que el primer no pertanyi al domini de l’atribut.",
+      "text": "Utilitzar un zero és equivalent a utilitzar un valor null, sempre que el primer no pertanyi al domini de l’atribut.",
       "options": [
         {
           "letter": "A",
@@ -1322,7 +1322,7 @@
       "id": "q_41",
       "number": 41,
       "topicId": "1.4",
-      "text": "¿En quin cas NO s’haurien d’utilitzar valor nulls?",
+      "text": "¿En quin cas NO s’haurien d’utilitzar valors null?",
       "options": [
         {
           "letter": "A",
@@ -1348,7 +1348,7 @@
       "id": "q_42",
       "number": 42,
       "topicId": "1.4",
-      "text": "El problema de tenir molts valorsnullen una taula és que malbaratem espai.",
+      "text": "El problema de tenir molts valors null en una taula és que malbaratem espai.",
       "options": [
         {
           "letter": "A",
@@ -1436,7 +1436,7 @@
       "id": "q_46",
       "number": 46,
       "topicId": "1.4",
-      "text": "Si a l’entrada de l’operació algebraica d’unió hi ha dues files que només tenen valornulla tots els seus atributs, a la sortida tindré només una fila.",
+      "text": "Si a l’entrada de l’operació algebraica d’unió hi ha dues files que només tenen valors nuls en tots els seus atributs, a la sortida tindré només una fila.",
       "options": [
         {
           "letter": "A",
@@ -1454,7 +1454,7 @@
       "id": "q_47",
       "number": 47,
       "topicId": "1.4",
-      "text": "Si a l’entrada de l’operació algebraica d’intersecció hi ha dues files (una a cada taula) que només tenen valornulla tots els seus atributs, a la sortida no apareixerà aquesta fila.",
+      "text": "Si a l’entrada de l’operació algebraica d’intersecció hi ha dues files (una a cada taula) que només tenen valors nuls en tots els seus atributs, a la sortida no apareixerà aquesta fila.",
       "options": [
         {
           "letter": "A",
@@ -1472,7 +1472,7 @@
       "id": "q_48",
       "number": 48,
       "topicId": "1.4",
-      "text": "Si a l’entrada de l’operació algebraica de diferència hi ha dues files (una a cada taula) que només tenen valornulla tots els seus atributs, a la sortida no apareixerà aquesta fila.",
+      "text": "Si a l’entrada de l’operació algebraica de diferència hi ha dues files (una a cada taula) que només tenen valors nuls en tots els seus atributs, a la sortida no apareixerà aquesta fila.",
       "options": [
         {
           "letter": "A",
@@ -1490,7 +1490,7 @@
       "id": "q_49",
       "number": 49,
       "topicId": "1.4",
-      "text": "Si com a resultat d’una operació algebraica de projecció queda més d’una fila que només te valornulla tots els seus atributs, a la sortida apareixerà aquesta fila tantes vegades com la tingues a l’entrada.",
+      "text": "Si com a resultat d’una operació algebraica de projecció queda més d’una fila que només té valors nuls en tots els seus atributs, a la sortida apareixerà aquesta fila tantes vegades com la tingui a l’entrada.",
       "options": [
         {
           "letter": "A",
@@ -1534,7 +1534,7 @@
       "id": "q_51",
       "number": 51,
       "topicId": "1.4",
-      "text": "El GROUP BY genera un grup per a cada valornullque troba.",
+      "text": "El GROUP BY genera un grup per a cada valor null que troba.",
       "options": [
         {
           "letter": "A",
@@ -1614,7 +1614,7 @@
       "id": "q_55",
       "number": 55,
       "topicId": "1.5",
-      "text": "En qualsevol dels tres tipus d’implementació de Generalització/Especializació posem un atribut discriminant.",
+      "text": "En qualsevol dels tres tipus d’implementació de generalització/especialització posem un atribut discriminant.",
       "options": [
         {
           "letter": "A",
@@ -1632,7 +1632,7 @@
       "id": "q_56",
       "number": 56,
       "topicId": "1.5",
-      "text": "En cap dels tres tipus d’implementació de Generalització/Especializació posem claus foranes.",
+      "text": "En cap dels tres tipus d’implementació de generalització/especialització posem claus foranes.",
       "options": [
         {
           "letter": "A",
@@ -1676,7 +1676,7 @@
       "id": "q_58",
       "number": 58,
       "topicId": "1.5",
-      "text": "Quan implementem una Generalització/Especializació en un SGBD relacional, sempre cal fer unajoinper consultar juntes totes les dades de la superclasse.",
+      "text": "Quan implementem una generalització/especialització en un SGBD relacional, sempre cal fer una join per consultar juntes totes les dades de la superclasse.",
       "options": [
         {
           "letter": "A",
@@ -1694,7 +1694,7 @@
       "id": "q_59",
       "number": 59,
       "topicId": "1.5",
-      "text": "Quan implementem una Generalització/Especializació en un SGBD relacional, sempre cal util- itzar unaouter joinper consultar juntes totes les dades de qualsevol de les subclasses.",
+      "text": "Quan implementem una generalització/especialització en un SGBD relacional, sempre cal utilitzar una outer join per consultar juntes totes les dades de qualsevol de les subclasses.",
       "options": [
         {
           "letter": "A",
@@ -1712,7 +1712,7 @@
       "id": "q_60",
       "number": 60,
       "topicId": "1.5",
-      "text": "¿Quin dels tres tipus dejoinNO genera mai valorsnull?",
+      "text": "¿Quin dels tres tipus de join NO genera mai valors null?",
       "options": [
         {
           "letter": "A",
@@ -1792,7 +1792,7 @@
       "id": "q_64",
       "number": 64,
       "topicId": "1.5",
-      "text": "Quan utilitzem la implementació de l’herència en PostgreSQL, ¿Quina de les següents afirma- cions és certa?",
+      "text": "Quan utilitzem la implementació de l’herència en PostgreSQL, ¿quina de les següents afirmacions és certa?",
       "options": [
         {
           "letter": "A",
@@ -1818,7 +1818,7 @@
       "id": "q_65",
       "number": 65,
       "topicId": "1.6",
-      "text": "¿Quina NO és una raó per a crear unsurrogate?",
+      "text": "¿Quina NO és una raó per a crear un surrogate?",
       "options": [
         {
           "letter": "A",
@@ -2134,7 +2134,7 @@
       "id": "q_79",
       "number": 79,
       "topicId": "2.2",
-      "text": "Independentment de les multiplicitats d’una associació binària, sempre hi ha una opció per evitar que es puguin generar valorsnull.",
+      "text": "Independentment de les multiplicitats d’una associació binària, sempre hi ha una opció per evitar que es puguin generar valors null.",
       "options": [
         {
           "letter": "A",
@@ -2212,7 +2212,7 @@
         },
         {
           "letter": "D",
-          "text": "Nombre de dependencies funcionals"
+          "text": "Nombre de dependències funcionals"
         }
       ],
       "correctLetter": "D",
@@ -2436,7 +2436,7 @@
       "id": "q_94",
       "number": 94,
       "topicId": "2.6",
-      "text": "Quan en l’esquema conceptual trobem una associació binària, independentment de la multi- plicitat, sempre podem transformar-la en una classe que tingui el mateix nom que l’associació i dues associacions amb les classes originals.",
+      "text": "Quan en l’esquema conceptual trobem una associació binària, independentment de la multiplicitat, sempre podem transformar-la en una classe que tingui el mateix nom que l’associació i dues associacions amb les classes originals.",
       "options": [
         {
           "letter": "A",
@@ -2542,7 +2542,7 @@
       "id": "q_99",
       "number": 99,
       "topicId": "2.7",
-      "text": "Un atribut multivaluat emmagatzemat per files mai genera valorsnull.",
+      "text": "Un atribut multivaluat emmagatzemat per files mai genera valors null.",
       "options": [
         {
           "letter": "A",
@@ -3226,7 +3226,7 @@
       "id": "q_133",
       "number": 133,
       "topicId": "3.5",
-      "text": "Donades les dependencies funcionals, la normalització es pot automatitzar totalment.",
+      "text": "Donades les dependències funcionals, la normalització es pot automatitzar totalment.",
       "options": [
         {
           "letter": "A",
@@ -3244,7 +3244,7 @@
       "id": "q_134",
       "number": 134,
       "topicId": "3.5",
-      "text": "Un esquema normalitzat és millor que un que no ho està, perquè el primer conté redundancies que el segon no té.",
+      "text": "Un esquema normalitzat és millor que un que no ho està, perquè el primer conté redundàncies que el segon no té.",
       "options": [
         {
           "letter": "A",
@@ -3288,7 +3288,7 @@
       "id": "q_136",
       "number": 136,
       "topicId": "3.5",
-      "text": "Donada la seqüència de conjunts d’esquemes tals que compleixen una certa dependència fun- cional:E 1N F,E 2N F,E 3N F,E BCN F iE 4N F (per exemple,E 3N F representa tots el esquemes que compleixen 3NF). Si considerem qualsevol parellaE X-EY tal queE X apareix abans queE Y en aquesta seqüència, podem afirmar que:",
+      "text": "Donada la seqüència de conjunts d’esquemes tals que compleixen una certa dependència funcional: E1NF, E2NF, E3NF, BCNF i E4NF (per exemple, E3NF representa tots els esquemes que compleixen 3NF). Si considerem qualsevol parella EX-EY tal que EX apareix abans que EY en aquesta seqüència, podem afirmar que:",
       "options": [
         {
           "letter": "A",
@@ -3918,7 +3918,7 @@
       "id": "q_165",
       "number": 165,
       "topicId": "4.4",
-      "text": "¿Quina NO es considera una limitació dels fulls de càlcul per analitzar dades multidimension- als?",
+      "text": "¿Quina NO es considera una limitació dels fulls de càlcul per analitzar dades multidimensionals?",
       "options": [
         {
           "letter": "A",
@@ -3978,7 +3978,7 @@
       "id": "q_167",
       "number": 167,
       "topicId": "4.4",
-      "text": "Les eines OLAP guarden les dades en una estructura de dades física en forma de cub n- dimensional.",
+      "text": "Les eines OLAP guarden les dades en una estructura de dades física en forma de cub n-dimensional.",
       "options": [
         {
           "letter": "A",
@@ -4282,7 +4282,7 @@
       "id": "q_181",
       "number": 181,
       "topicId": "4.7",
-      "text": "El principal problema de les eines ROLAP és que generen massajoins.",
+      "text": "El principal problema de les eines ROLAP és que generen massa joins.",
       "options": [
         {
           "letter": "A",
@@ -4294,7 +4294,7 @@
         }
       ],
       "correctLetter": "A",
-      "explicacion": "**Resum ràpid:**\nLa resposta és **A: Cert**. El problema típic de ROLAP són els *massajoins* (molts joins costosos).\n\n**Explicació detallada:**\nCada consulta multidimensional es tradueix a SQL que uneix la taula de fets amb diverses dimensions. Amb moltes dimensions i volum gran, aquests joins massius (*massajoins*) degraden el rendiment; és el punt feble clàssic de ROLAP.\n\n**Anàlisi de les opcions:**\n- **A (Cert):** correcta.\n- **B (Fals):** incorrecte.\n\n**Regla per recordar:**\nROLAP ⇒ compte amb els massajoins."
+      "explicacion": "**Resum ràpid:**\nLa resposta és **A: Cert**. El problema típic de ROLAP són els *massa joins* (molts joins costosos).\n\n**Explicació detallada:**\nCada consulta multidimensional es tradueix a SQL que uneix la taula de fets amb diverses dimensions. Amb moltes dimensions i volum gran, aquests joins massius (*massa joins*) degraden el rendiment; és el punt feble clàssic de ROLAP.\n\n**Anàlisi de les opcions:**\n- **A (Cert):** correcta.\n- **B (Fals):** incorrecte.\n\n**Regla per recordar:**\nROLAP ⇒ compte amb els massa joins."
     },
     {
       "id": "q_182",
@@ -4388,7 +4388,7 @@
       "id": "q_186",
       "number": 186,
       "topicId": "4.7",
-      "text": "UnaCube-Querysobre una eina ROLAP retorna una taula relacional.",
+      "text": "Una Cube-Query sobre una eina ROLAP retorna una taula relacional.",
       "options": [
         {
           "letter": "A",
@@ -4432,7 +4432,7 @@
       "id": "q_188",
       "number": 188,
       "topicId": "4.8",
-      "text": "¿Quin NO és un possible significat del valornull?",
+      "text": "¿Quin NO és un possible significat del valor null?",
       "options": [
         {
           "letter": "A",
@@ -4458,7 +4458,7 @@
       "id": "q_189",
       "number": 189,
       "topicId": "4.8",
-      "text": "Qualsevol consulta que utilitzi ROLLUP i/o CUBE, sempre es pot rescriure utilitzant només GROUPING SETS.",
+      "text": "Qualsevol consulta que utilitzi ROLLUP i/o CUBE, sempre es pot reescriure utilitzant només GROUPING SETS.",
       "options": [
         {
           "letter": "A",
@@ -4530,7 +4530,7 @@
       "id": "q_193",
       "number": 193,
       "topicId": "5.1",
-      "text": "Els sistemes NOSQL garanteixes les restriccions d’integritat, tal com fan els sistemes relation- als.",
+      "text": "Els sistemes NoSQL garanteixen les restriccions d’integritat, tal com fan els sistemes relacionals.",
       "options": [
         {
           "letter": "A",
@@ -4548,7 +4548,7 @@
       "id": "q_194",
       "number": 194,
       "topicId": "5.1",
-      "text": "Impedance mismatch vol dir que el format de les dades al disc i a la memoria és diferent.",
+      "text": "Impedance mismatch vol dir que el format de les dades al disc i a la memòria és diferent.",
       "options": [
         {
           "letter": "A",
@@ -4610,7 +4610,7 @@
       "id": "q_197",
       "number": 197,
       "topicId": "5.2",
-      "text": "La independència física, d’acord amb l’arquitectura ANSI/SPARC, garanteix que un canvi en l’esquema intern no afectara a les taules de la base de dades.",
+      "text": "La independència física, d’acord amb l’arquitectura ANSI/SPARC, garanteix que un canvi en l’esquema intern no afectarà les taules de la base de dades.",
       "options": [
         {
           "letter": "A",
@@ -4628,7 +4628,7 @@
       "id": "q_198",
       "number": 198,
       "topicId": "5.2",
-      "text": "La independència lògica, d’acord amb l’arquitectura ANSI/SPARC, garanteix que un canvi en les vistes no afectara a les taules de la base de dades.",
+      "text": "La independència lògica, d’acord amb l’arquitectura ANSI/SPARC, garanteix que un canvi en les vistes no afectarà les taules de la base de dades.",
       "options": [
         {
           "letter": "A",
@@ -4646,7 +4646,7 @@
       "id": "q_199",
       "number": 199,
       "topicId": "5.2",
-      "text": "La independència lògica, d’acord amb l’arquitectura ANSI/SPARC, garanteix que un canvi en una taula no afectara a cap vista de la base de dades, tret que el canvi afecti els atributs o taules utilitzats en la vista.",
+      "text": "La independència lògica, d’acord amb l’arquitectura ANSI/SPARC, garanteix que un canvi en una taula no afectarà cap vista de la base de dades, tret que el canvi afecti els atributs o taules utilitzats en la vista.",
       "options": [
         {
           "letter": "A",
@@ -4682,7 +4682,7 @@
       "id": "q_201",
       "number": 201,
       "topicId": "5.3",
-      "text": "En PostgreSQL, per canviar el valor d’una posició concreta d’unarray, hem de reassignar tot l’arraycomplet a la fila corresponent.",
+      "text": "En PostgreSQL, per canviar el valor d’una posició concreta d’un array, hem de reassignar tot l’array complet a la fila corresponent.",
       "options": [
         {
           "letter": "A",
@@ -4700,7 +4700,7 @@
       "id": "q_202",
       "number": 202,
       "topicId": "5.3",
-      "text": "Unarrayen PostgreSQL té un nombre fix de valors, indicat en la seva declaració.",
+      "text": "Un array en PostgreSQL té un nombre fix de valors, indicat en la seva declaració.",
       "options": [
         {
           "letter": "A",
@@ -4718,7 +4718,7 @@
       "id": "q_203",
       "number": 203,
       "topicId": "5.3",
-      "text": "Unarrayen PostgreSQL pot contenir valorsnulls.",
+      "text": "Un array en PostgreSQL pot contenir valors null.",
       "options": [
         {
           "letter": "A",
@@ -4772,7 +4772,7 @@
       "id": "q_206",
       "number": 206,
       "topicId": "5.3",
-      "text": "En general, la funció per calcular agregats a partir d’unarray, l’ha de definir l’usuari.",
+      "text": "En general, la funció per calcular agregats a partir d’un array, l’ha de definir l’usuari.",
       "options": [
         {
           "letter": "A",
@@ -4790,7 +4790,7 @@
       "id": "q_207",
       "number": 207,
       "topicId": "5.3",
-      "text": "PostgreSQL disposa de funcions booleanes específiques que permeten definir fàcilment restric- cions d’integritat sobre cadascun dels elements d’unarray.",
+      "text": "PostgreSQL disposa de funcions booleanes específiques que permeten definir fàcilment restriccions d’integritat sobre cadascun dels elements d’un array.",
       "options": [
         {
           "letter": "A",
@@ -4808,7 +4808,7 @@
       "id": "q_208",
       "number": 208,
       "topicId": "5.3",
-      "text": "El nivell de concurrència que permet guardar un atribut multivaluat en unarrayés el mateix que si el guardem per columnes.",
+      "text": "El nivell de concurrència que permet guardar un atribut multivaluat en un array és el mateix que si el guardem per columnes.",
       "options": [
         {
           "letter": "A",
@@ -4898,7 +4898,7 @@
       "id": "q_213",
       "number": 213,
       "topicId": "5.4",
-      "text": "Podem tenir un document JSON que compleixi la mateixa propietat de la BCNF (és a dir, cada determinant determina per ell mateix tots els atributs del document, ja sigui directa o indi- rectament).",
+      "text": "Podem tenir un document JSON que compleixi la mateixa propietat de la BCNF (és a dir, cada determinant determina per ell mateix tots els atributs del document, ja sigui directa o indirectament).",
       "options": [
         {
           "letter": "A",
@@ -4910,7 +4910,7 @@
         }
       ],
       "correctLetter": "A",
-      "explicacion": "**Resum ràpid:** Correcta **A (Cert)**: un document JSON pot respectar la propietat anàloga a BCNF (cada determinant determina tots els atributs del document).\n\n**Explicació detallada:** Tot i no ser una relació plana, es pot dissenyar el document perquè les dependències funcionals no violín l’esperit de BCNF: un sol «subjecte» amb atributs que en depenen, sense determinants estranys niats de forma anòmala.\n\n**Anàlisi de les opcions:** **A (Cert):** correcta — disseny possible «en esperit BCNF». **B (Fals):** incorrecte.\n\n**Regla per recordar:** Es pot dissenyar JSON respectant l’esperit BCNF."
+      "explicacion": "**Resum ràpid:** Correcta **A (Cert)**: un document JSON pot respectar la propietat anàloga a BCNF (cada determinant determina tots els atributs del document).\n\n**Explicació detallada:** Tot i no ser una relació plana, es pot dissenyar el document perquè les dependències funcionals no violin l’esperit de BCNF: un sol «subjecte» amb atributs que en depenen, sense determinants estranys niats de forma anòmala.\n\n**Anàlisi de les opcions:** **A (Cert):** correcta — disseny possible «en esperit BCNF». **B (Fals):** incorrecte.\n\n**Regla per recordar:** Es pot dissenyar JSON respectant l’esperit BCNF."
     },
     {
       "id": "q_214",
@@ -5556,7 +5556,7 @@
       "id": "q_244",
       "number": 244,
       "topicId": "6.3",
-      "text": "Els SGBDs sempre permeten modificar una taula a través d’una vista que faci unajoin.",
+      "text": "Els SGBDs sempre permeten modificar una taula a través d’una vista que faci una join.",
       "options": [
         {
           "letter": "A",
@@ -5622,7 +5622,7 @@
       "id": "q_247",
       "number": 247,
       "topicId": "6.4",
-      "text": "Per tal que es pugui mantenir una vista materialitzada de forma incremental, només cal crear ellogadequat.",
+      "text": "Per tal que es pugui mantenir una vista materialitzada de forma incremental, només cal crear el log adequat.",
       "options": [
         {
           "letter": "A",
@@ -5640,7 +5640,7 @@
       "id": "q_248",
       "number": 248,
       "topicId": "6.4",
-      "text": "Hem de crear un únicloga cada taula que tingui vistes materialitzar a mantenir de forma incremental, independentment del seu nombre.",
+      "text": "Hem de crear un únic log a cada taula que tingui vistes materialitzades per mantenir de forma incremental, independentment del seu nombre.",
       "options": [
         {
           "letter": "A",
@@ -5676,7 +5676,7 @@
       "id": "q_250",
       "number": 250,
       "topicId": "6.4",
-      "text": "Sempre es pot fer el manteniment d’una vista materialitzada de forma incremental si ellog conté les dades adequades.",
+      "text": "Sempre es pot fer el manteniment d’una vista materialitzada de forma incremental si el log conté les dades adequades.",
       "options": [
         {
           "letter": "A",
@@ -5766,7 +5766,7 @@
       "id": "q_255",
       "number": 255,
       "topicId": "6.5",
-      "text": "¿Quin NO és un dels requisits per a poder rescriure una consulta en termes d’una vista materialitzada?",
+      "text": "¿Quin NO és un dels requisits per a poder reescriure una consulta en termes d’una vista materialitzada?",
       "options": [
         {
           "letter": "A",
@@ -5910,7 +5910,7 @@
       "id": "q_261",
       "number": 261,
       "topicId": "6.5",
-      "text": "¿Quin NO és un dels requisits per a poder rescriure una consulta en termes d'una vista materialitzada?",
+      "text": "¿Quin NO és un dels requisits per a poder reescriure una consulta en termes d'una vista materialitzada?",
       "options": [
         {
           "letter": "A",
@@ -6166,7 +6166,7 @@
         },
         {
           "letter": "D",
-          "text": "´Es útil per gestionar i afinar el funcionament de la base de dades"
+          "text": "?s útil per gestionar i afinar el funcionament de la base de dades"
         }
       ],
       "correctLetter": "C",
@@ -6222,7 +6222,7 @@
         },
         {
           "letter": "D",
-          "text": "Informació dels índexs, com ara la seva al¸ cada o el rang de valors"
+          "text": "Informació dels índexs, com ara la seva alçada o el rang de valors"
         }
       ],
       "correctLetter": "C",
@@ -6268,7 +6268,7 @@
       "id": "q_276",
       "number": 276,
       "topicId": "7.3",
-      "text": "Les estructures d’accés (es a dir, els índexs) són ... respecte a les taules.",
+      "text": "Les estructures d’accés (és a dir, els índexs) són ... respecte a les taules.",
       "options": [
         {
           "letter": "A",
@@ -6334,7 +6334,7 @@
         },
         {
           "letter": "C",
-          "text": "Una adre¸ ca física del registre"
+          "text": "Una adreça física del registre"
         },
         {
           "letter": "D",
@@ -6388,7 +6388,7 @@
       "id": "q_282",
       "number": 282,
       "topicId": "7.3",
-      "text": "Les estructures d'accés (es a dir, els índexs) són . . . respecte a les taules.",
+      "text": "Les estructures d'accés (és a dir, els índexs) són . . . respecte a les taules.",
       "options": [
         {
           "letter": "A",
@@ -7354,7 +7354,7 @@
       "id": "q_333",
       "number": 333,
       "topicId": "8.4",
-      "text": "La selecció sempre commuta (sense posar ni treure res) amb lajoin.",
+      "text": "La selecció sempre commuta (sense posar ni treure res) amb la join.",
       "options": [
         {
           "letter": "A",
@@ -7372,7 +7372,7 @@
       "id": "q_334",
       "number": 334,
       "topicId": "8.4",
-      "text": "La selecció sempre commuta (sense posar ni treure res) amb qualsevol operació de conjunts (es a dir, unió, intersecció i diferència).",
+      "text": "La selecció sempre commuta (sense posar ni treure res) amb qualsevol operació de conjunts (és a dir, unió, intersecció i diferència).",
       "options": [
         {
           "letter": "A",
@@ -7408,7 +7408,7 @@
       "id": "q_336",
       "number": 336,
       "topicId": "8.4",
-      "text": "La projecció sempre commuta (sense posar ni treure res) amb lajoin.",
+      "text": "La projecció sempre commuta (sense posar ni treure res) amb la join.",
       "options": [
         {
           "letter": "A",
@@ -7426,7 +7426,7 @@
       "id": "q_337",
       "number": 337,
       "topicId": "8.4",
-      "text": "La projecció sempre commuta (sense posar ni treure res) amb qualsevol operació de conjunts (es a dir, unió, intersecció i diferència).",
+      "text": "La projecció sempre commuta (sense posar ni treure res) amb qualsevol operació de conjunts (és a dir, unió, intersecció i diferència).",
       "options": [
         {
           "letter": "A",
@@ -7470,7 +7470,7 @@
       "id": "q_339",
       "number": 339,
       "topicId": "8.5",
-      "text": "¿Quin nom NO rep l’algorisme que segueix l’execution managerper obtenir el resultat d’una consulta?",
+      "text": "¿Quin nom NO rep l’algorisme que segueix l’execution manager per obtenir el resultat d’una consulta?",
       "options": [
         {
           "letter": "A",
@@ -7596,7 +7596,7 @@
         },
         {
           "letter": "C",
-          "text": "L’ordre de lesjoins"
+          "text": "L’ordre de les joins"
         },
         {
           "letter": "D",
@@ -7672,7 +7672,7 @@
       "id": "q_348",
       "number": 348,
       "topicId": "8.5",
-      "text": "Quan fem encarrilament (pipelining), l’ordre de lesjoinsés ...",
+      "text": "Quan fem encarrilament (pipelining), l’ordre de les joins és ...",
       "options": [
         {
           "letter": "A",
@@ -7824,7 +7824,7 @@
       "id": "q_356",
       "number": 356,
       "topicId": "9.1",
-      "text": "El càlcul del factor de selecció de lajoinés el mateix que el de la intersecció.",
+      "text": "El càlcul del factor de selecció de la join és el mateix que el de la intersecció.",
       "options": [
         {
           "letter": "A",
@@ -8004,7 +8004,7 @@
       "id": "q_366",
       "number": 366,
       "topicId": "9.1",
-      "text": "¿Què NO afecta al factor de selecció d’unajoin?.",
+      "text": "¿Què NO afecta al factor de selecció d’una join?",
       "options": [
         {
           "letter": "A",
@@ -8012,7 +8012,7 @@
         },
         {
           "letter": "B",
-          "text": "Que un dels atributs accepti valor nulls"
+          "text": "Que un dels atributs accepti valors null"
         },
         {
           "letter": "C",
@@ -8192,7 +8192,7 @@
       "id": "q_376",
       "number": 376,
       "topicId": "9.2",
-      "text": "Els index tipus arbre serveixen per avaluar clàusules lògiques amb qualsevol tipus de com- paració.",
+      "text": "Els índexs tipus arbre serveixen per avaluar clàusules lògiques amb qualsevol tipus de comparació.",
       "options": [
         {
           "letter": "A",
@@ -8210,7 +8210,7 @@
       "id": "q_377",
       "number": 377,
       "topicId": "9.2",
-      "text": "Els index tipus hash serveixen per avaluar clàusules lògiques només amb comparacions per igualtat.",
+      "text": "Els índexs tipus hash serveixen per avaluar clàusules lògiques només amb comparacions per igualtat.",
       "options": [
         {
           "letter": "A",
@@ -8264,7 +8264,7 @@
       "id": "q_380",
       "number": 380,
       "topicId": "9.2",
-      "text": "Les operacions ambbitmapssón equivalents a les operacions de llistes de RIDs.",
+      "text": "Les operacions amb bitmaps són equivalents a les operacions de llistes de RIDs.",
       "options": [
         {
           "letter": "A",
@@ -8282,7 +8282,7 @@
       "id": "q_381",
       "number": 381,
       "topicId": "9.2",
-      "text": "Els index tipus bitmaps serveixen per avaluar clàusules lògiques amb qualsevol tipus de com- paració.",
+      "text": "Els índexs tipus bitmap serveixen per avaluar clàusules lògiques amb qualsevol tipus de comparació.",
       "options": [
         {
           "letter": "A",
@@ -8336,7 +8336,7 @@
       "id": "q_384",
       "number": 384,
       "topicId": "9.2",
-      "text": "Els index tipus hash serveixen per avaluar clàusules lògiques només amb comparacions per igualtat.",
+      "text": "Els índexs tipus hash serveixen per avaluar clàusules lògiques només amb comparacions per igualtat.",
       "options": [
         {
           "letter": "A",
@@ -8424,7 +8424,7 @@
         },
         {
           "letter": "D",
-          "text": "´Es irrellevant"
+          "text": "?s irrellevant"
         }
       ],
       "correctLetter": "D",
@@ -8542,7 +8542,7 @@
       "id": "q_395",
       "number": 395,
       "topicId": "10.1",
-      "text": "L’opció que dona el cost més baix per a fer unajoines sempre tenir les dues taules en una estructura cluster.",
+      "text": "L’opció que dona el cost més baix per a fer una join és sempre tenir les dues taules en una estructura cluster.",
       "options": [
         {
           "letter": "A",
@@ -8560,7 +8560,7 @@
       "id": "q_396",
       "number": 396,
       "topicId": "10.2",
-      "text": "L’algorisme deRow Nested Loopsés simètric.",
+      "text": "L’algorisme de Row Nested Loops és simètric.",
       "options": [
         {
           "letter": "A",
@@ -8596,7 +8596,7 @@
       "id": "q_398",
       "number": 398,
       "topicId": "10.2",
-      "text": "L’algorisme deRow Nested Loopsnomés es pot utilitzar si, en l’arbre de procés, l’operació de joinesta situada directament sobre la taula de l’índex utilitzat.",
+      "text": "L’algorisme de Row Nested Loops només es pot utilitzar si, en l’arbre de procés, l’operació de join està situada directament sobre la taula de l’índex utilitzat.",
       "options": [
         {
           "letter": "A",
@@ -8614,7 +8614,7 @@
       "id": "q_399",
       "number": 399,
       "topicId": "10.2",
-      "text": "L’algorisme deRow Nested Loopsnomés es pot utilitzar si la comparació de lajoinés la igualtat.",
+      "text": "L’algorisme de Row Nested Loops només es pot utilitzar si la comparació de la join és la igualtat.",
       "options": [
         {
           "letter": "A",
@@ -8632,7 +8632,7 @@
       "id": "q_400",
       "number": 400,
       "topicId": "10.2",
-      "text": "El cost de l’algorisme deRow Nested Loopsés sempre més baix si no hem d’accedir atributs de la taula interna que no siguin els del propi índex utilitzat per l’algorisme.",
+      "text": "El cost de l’algorisme de Row Nested Loops és sempre més baix si no hem d’accedir a atributs de la taula interna que no siguin els del propi índex utilitzat per l’algorisme.",
       "options": [
         {
           "letter": "A",
@@ -8650,7 +8650,7 @@
       "id": "q_401",
       "number": 401,
       "topicId": "10.2",
-      "text": "L’algorisme deRow Nested Loopsnomés permet utilitzar un índex tipus cluster si requerim atributs de la taula interna que no siguin els del propi índex.",
+      "text": "L’algorisme de Row Nested Loops només permet utilitzar un índex tipus cluster si requerim atributs de la taula interna que no siguin els del propi índex.",
       "options": [
         {
           "letter": "A",
@@ -8740,7 +8740,7 @@
       "id": "q_406",
       "number": 406,
       "topicId": "10.3",
-      "text": "L’algorisme deHash-joinrequereix l’existència d’un índex tipushasha priori.",
+      "text": "L’algorisme de Hash-join requereix l’existència d’un índex tipus hash a priori.",
       "options": [
         {
           "letter": "A",
@@ -8758,7 +8758,7 @@
       "id": "q_407",
       "number": 407,
       "topicId": "10.3",
-      "text": "L’algorisme deHash-joinnomés es pot utilitzar si la comparació de lajoinés la igualtat.",
+      "text": "L’algorisme de Hash-join només es pot utilitzar si la comparació de la join és la igualtat.",
       "options": [
         {
           "letter": "A",
@@ -8776,7 +8776,7 @@
       "id": "q_408",
       "number": 408,
       "topicId": "10.3",
-      "text": "L’algorisme deHash-joinés simètric.",
+      "text": "L’algorisme de Hash-join és simètric.",
       "options": [
         {
           "letter": "A",
@@ -8812,7 +8812,7 @@
       "id": "q_410",
       "number": 410,
       "topicId": "10.3",
-      "text": "L’algorisme deHash-joinrequereix dues passades si una de les taules no hi cap a memòria.",
+      "text": "L’algorisme de Hash-join requereix dues passades si una de les taules no hi cap a memòria.",
       "options": [
         {
           "letter": "A",
@@ -8848,7 +8848,7 @@
       "id": "q_412",
       "number": 412,
       "topicId": "10.4",
-      "text": "L’algorisme deSort-Matchnomés es pot utilitzar si la comparació de lajoinés la igualtat.",
+      "text": "L’algorisme de Sort-Match només es pot utilitzar si la comparació de la join és la igualtat.",
       "options": [
         {
           "letter": "A",
@@ -8920,7 +8920,7 @@
       "id": "q_416",
       "number": 416,
       "topicId": "10.4",
-      "text": "L’algorisme deSort-Matchdeixa el resultat ordenat per l’atribut dejoin.",
+      "text": "L’algorisme de Sort-Match deixa el resultat ordenat per l’atribut de join.",
       "options": [
         {
           "letter": "A",
@@ -8964,7 +8964,7 @@
       "id": "q_418",
       "number": 418,
       "topicId": "10.5",
-      "text": "Qui domina el cost d’execució de la consulta quan utilitzem la técnica d’encarrilament (pipelin- ing)?",
+      "text": "Qui domina el cost d’execució de la consulta quan utilitzem la tècnica d’encarrilament (pipelining)?",
       "options": [
         {
           "letter": "A",
@@ -9102,7 +9102,7 @@
       "id": "q_423",
       "number": 423,
       "topicId": "11.1",
-      "text": "Les extensions serveixen per a garantir que el sistema operatiu assigni espai físicament conse- cutiu al disc.",
+      "text": "Les extensions serveixen per a garantir que el sistema operatiu assigni espai físicament consecutiu al disc.",
       "options": [
         {
           "letter": "A",
@@ -9264,7 +9264,7 @@
       "id": "q_432",
       "number": 432,
       "topicId": "11.3",
-      "text": "El nombre de repeticions de cada valor es irrellevant per a la utilitat d’un índex tipus arbre.",
+      "text": "El nombre de repeticions de cada valor ?s irrellevant per a la utilitat d’un índex tipus arbre.",
       "options": [
         {
           "letter": "A",
@@ -9282,7 +9282,7 @@
       "id": "q_433",
       "number": 433,
       "topicId": "11.3",
-      "text": "Un cop s’ha creat un índex tipusbitmap, es poden continuar fent insercions a la taula, però no de valors nous de l’atribut indexat.",
+      "text": "Un cop s’ha creat un índex tipus bitmap, es poden continuar fent insercions a la taula, però no de valors nous de l’atribut indexat.",
       "options": [
         {
           "letter": "A",
@@ -9300,7 +9300,7 @@
       "id": "q_434",
       "number": 434,
       "topicId": "11.3",
-      "text": "Fer una inserció a una taula que té un índex tipusbitmapno incrementa la grandària de l’índex, tret que el valor de l’atribut corresponent no existís abans a la taula.",
+      "text": "Fer una inserció a una taula que té un índex tipus bitmap no incrementa la grandària de l’índex, tret que el valor de l’atribut corresponent no existís abans a la taula.",
       "options": [
         {
           "letter": "A",
@@ -9318,7 +9318,7 @@
       "id": "q_435",
       "number": 435,
       "topicId": "11.3",
-      "text": "Fer una modificació (UPDATE) a una taula que té un índex tipusbitmapno incrementa la grandària de l’índex, tret que el nou valor assignat a l’atribut corresponent no existís abans a la taula.",
+      "text": "Fer una modificació (UPDATE) a una taula que té un índex tipus bitmap no incrementa la grandària de l’índex, tret que el nou valor assignat a l’atribut corresponent no existís abans a la taula.",
       "options": [
         {
           "letter": "A",
@@ -9336,7 +9336,7 @@
       "id": "q_436",
       "number": 436,
       "topicId": "11.3",
-      "text": "En el cas de l’índexbitmap, el factor de selecció indica el percentatge de blocs de la taula que caldrà accedir.",
+      "text": "En el cas de l’índex bitmap, el factor de selecció indica el percentatge de blocs de la taula que caldrà accedir.",
       "options": [
         {
           "letter": "A",
@@ -9460,7 +9460,7 @@
       "id": "q_442",
       "number": 442,
       "topicId": "11.3",
-      "text": "L’índex tipusbitmapno es pot utilitzar si l’atribut indexat conté valorsnull.",
+      "text": "L’índex tipus bitmap no es pot utilitzar si l’atribut indexat conté valors null.",
       "options": [
         {
           "letter": "A",
@@ -9586,7 +9586,7 @@
         },
         {
           "letter": "B",
-          "text": "Nombre d’abra¸ cades mortals (deadlocks)"
+          "text": "Nombre d’abraçades mortals (deadlocks)"
         },
         {
           "letter": "C",
@@ -9698,7 +9698,7 @@
       "id": "q_453",
       "number": 453,
       "topicId": "11.4",
-      "text": "El predicat de les consultes es irrellevant per a triar el tipus d’índex d’una taula.",
+      "text": "El predicat de les consultes ?s irrellevant per a triar el tipus d’índex d’una taula.",
       "options": [
         {
           "letter": "A",
@@ -9770,7 +9770,7 @@
       "id": "q_457",
       "number": 457,
       "topicId": "11.4",
-      "text": "Com més repeticions tingui un atribut, millor serà posar un índex tipusbitmapen comptes d’un arbre.",
+      "text": "Com més repeticions tingui un atribut, millor serà posar un índex tipus bitmap en comptes d’un arbre.",
       "options": [
         {
           "letter": "A",
@@ -10118,7 +10118,7 @@
       "id": "q_475",
       "number": 475,
       "topicId": "12.2",
-      "text": "Fentvacuum, eliminem les versions obsoletes de les dades en el control de concurrència multi- versió.",
+      "text": "Fent vacuum, eliminem les versions obsoletes de les dades en el control de concurrència multiversió.",
       "options": [
         {
           "letter": "A",
@@ -10172,7 +10172,7 @@
       "id": "q_478",
       "number": 478,
       "topicId": "12.2",
-      "text": "El control de concurrència snapshot isolation garanteix serializabilitat.",
+      "text": "El control de concurrència snapshot isolation garanteix serialitzabilitat.",
       "options": [
         {
           "letter": "A",
@@ -10190,7 +10190,7 @@
       "id": "q_479",
       "number": 479,
       "topicId": "12.2",
-      "text": "Amb un control de concurrència multi-versió basat en bloquejos, s’aplica un control de con- currència diferent depenent de si la transacció ésread-onlyoread-write.",
+      "text": "Amb un control de concurrència multiversió basat en bloquejos, s’aplica un control de concurrència diferent depenent de si la transacció és read-only o read-write.",
       "options": [
         {
           "letter": "A",
@@ -10606,7 +10606,7 @@
       "id": "q_497",
       "number": 497,
       "topicId": "12.3",
-      "text": "¿Quan NO es fa unflushdels buffers del SGBD?",
+      "text": "¿Quan NO es fa un flush dels buffers del SGBD?",
       "options": [
         {
           "letter": "A",
@@ -10666,7 +10666,7 @@
         },
         {
           "letter": "C",
-          "text": "aÏllament"
+          "text": "Aïllament"
         },
         {
           "letter": "D",
@@ -10692,7 +10692,7 @@
         },
         {
           "letter": "C",
-          "text": "aÏllament"
+          "text": "Aïllament"
         },
         {
           "letter": "D",
@@ -10706,7 +10706,7 @@
       "id": "q_501",
       "number": 501,
       "topicId": "12.3",
-      "text": "Just quan acabem de fer unbackup, podem esborrant el dietari (log).",
+      "text": "Just quan acabem de fer un backup, podem esborrar el dietari (log).",
       "options": [
         {
           "letter": "A",
@@ -10724,7 +10724,7 @@
       "id": "q_502",
       "number": 502,
       "topicId": "12.3",
-      "text": "Si configurem de forma adequada el dietari (log), no ens cal ferbackups.",
+      "text": "Si configurem de forma adequada el dietari (log), no ens cal fer backups.",
       "options": [
         {
           "letter": "A",
@@ -10742,7 +10742,7 @@
       "id": "q_503",
       "number": 503,
       "topicId": "12.3",
-      "text": "Mentre s’executa unbackup, el rendiment del sistema empitjora.",
+      "text": "Mentre s’executa un backup, el rendiment del sistema empitjora.",
       "options": [
         {
           "letter": "A",
@@ -10796,7 +10796,7 @@
       "id": "q_506",
       "number": 506,
       "topicId": "12.4",
-      "text": "¿Quin NO és un problema provocat per que les transaccions read-write siguin innecessàriament llargues?",
+      "text": "¿Quin NO és un problema provocat perqu? les transaccions read-write siguin innecessàriament llargues?",
       "options": [
         {
           "letter": "A",
@@ -10808,7 +10808,7 @@
         },
         {
           "letter": "C",
-          "text": "´Es més probable que el sistema falli durant la seva execució"
+          "text": "?s més probable que el sistema falli durant la seva execució"
         },
         {
           "letter": "D",
@@ -10898,7 +10898,7 @@
       "id": "q_511",
       "number": 511,
       "topicId": "12.4",
-      "text": "Si concatenem (chain) dues transaccions, no s’alliberen els recursos (p.e., memoria) de la primera i aquests es reutilitzen en la segona, que manté la mateixa configuració (p.e., nivell d’aïllament).",
+      "text": "Si concatenem (chain) dues transaccions, no s’alliberen els recursos (p. ex., memòria) de la primera i aquests es reutilitzen en la segona, que manté la mateixa configuració (p. ex., nivell d’aïllament).",
       "options": [
         {
           "letter": "A",
@@ -10965,24 +10965,6 @@
       ],
       "correctLetter": "A",
       "explicacion": "**Resum ràpid:** Correcta **A (Cert)**: un sistema només de lectures pot prescindir de CC i de recuperació clàssics.\n\n**Explicació detallada:** Sense escriptures no hi ha conflictes WW ni TX a desfer; no calen locks ni WAL d’UNDO/REDO de DML. (Només cal llegir una còpia consistent.)\n\n**Anàlisi de les opcions:** **A Cert**: correcte. **B Fals**: incorrecte.\n\n**Regla per recordar:** Read-only total → fora CC i recovery de writes."
-    },
-    {
-      "id": "q_521",
-      "number": 521,
-      "topicId": "12.3",
-      "text": "Si tenim un sistema que només fa lectures, podem prescindir tant dels mecanismes de control de concurrència com dels de recuperació.",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Cert"
-        },
-        {
-          "letter": "B",
-          "text": "Fals"
-        }
-      ],
-      "correctLetter": "A",
-      "explicacion": "**Resum ràpid:** Correcta **A (Cert)**: (mateixa que q_514) només lectures ⇒ sense CC ni recovery de DML.\n\n**Explicació detallada:** Si mai no es modifica res, no hi ha races d’escriptura ni estats intermedis a restaurar. Es poden desactivar mecanismes pensats per a writers.\n\n**Anàlisi de les opcions:** **A Cert**: correcte. **B Fals**: incorrecte.\n\n**Regla per recordar:** Només SELECT ⇒ simplifica tot el motor transaccional."
     }
   ]
 }

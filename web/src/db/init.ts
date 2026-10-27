@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS questions (
   topic_id TEXT NOT NULL REFERENCES topics(id),
   text TEXT NOT NULL,
   options TEXT NOT NULL,
-  correct_letter TEXT NOT NULL CHECK (correct_letter IN ('A','B','C','D','E','F')),
+  correct_letter TEXT NOT NULL CHECK (correct_letter IN ('A','B','C','D','E','F','G')),
   explicacion TEXT,
   UNIQUE(number)
 );
@@ -39,7 +39,7 @@ CREATE INDEX IF NOT EXISTS idx_test_sessions_started_at ON test_sessions(started
 CREATE TABLE IF NOT EXISTS user_answers (
   id TEXT PRIMARY KEY,
   question_id TEXT NOT NULL REFERENCES questions(id),
-  selected_letter TEXT NOT NULL CHECK (selected_letter IN ('A','B','C','D','E','F')),
+  selected_letter TEXT NOT NULL CHECK (selected_letter IN ('A','B','C','D','E','F','G')),
   is_correct INTEGER NOT NULL CHECK (is_correct IN (0, 1)),
   test_session_id TEXT REFERENCES test_sessions(id),
   answered_at TEXT NOT NULL
