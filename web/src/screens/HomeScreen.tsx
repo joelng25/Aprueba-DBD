@@ -99,7 +99,7 @@ export default function HomeScreen() {
         <div className="home__sidebar-card home__sidebar-card--star">
           <p className="home__sidebar-label">T'està ajudant?</p>
           <a
-            href={GITNB_REPO}
+            href={GITHUB_REPO}
             target="_blank"
             rel="noopener noreferrer"
             className="home__star-link"
