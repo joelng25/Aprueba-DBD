@@ -211,238 +211,244 @@
       "sortOrder": 34
     },
     {
+      "id": "5.6",
+      "title": "Managing Large Arrays",
+      "section": "5 NOSQL",
+      "sortOrder": 35
+    },
+    {
       "id": "5.4",
       "title": "Semi-structured Database Model",
       "section": "5 NOSQL",
-      "sortOrder": 35
+      "sortOrder": 36
     },
     {
       "id": "5.5",
       "title": "JSON Data Type",
       "section": "5 NOSQL",
-      "sortOrder": 36
+      "sortOrder": 37
     },
     {
       "id": "6.1",
       "title": "View Definition and Problems",
       "section": "6 Views",
-      "sortOrder": 37
+      "sortOrder": 38
     },
     {
       "id": "6.2",
       "title": "View Expansion",
       "section": "6 Views",
-      "sortOrder": 38
+      "sortOrder": 39
     },
     {
       "id": "6.3",
       "title": "Update Through Views",
       "section": "6 Views",
-      "sortOrder": 39
+      "sortOrder": 40
     },
     {
       "id": "6.4",
       "title": "View Updating",
       "section": "6 Views",
-      "sortOrder": 40
+      "sortOrder": 41
     },
     {
       "id": "6.5",
       "title": "Query Rewriting",
       "section": "6 Views",
-      "sortOrder": 41
+      "sortOrder": 42
     },
     {
       "id": "6.6",
       "title": "Materialized View Selection",
       "section": "6 Views",
-      "sortOrder": 42
+      "sortOrder": 43
     },
     {
       "id": "6.7",
       "title": "Example of Materialize View Selection",
       "section": "6 Views",
-      "sortOrder": 43
+      "sortOrder": 44
     },
     {
       "id": "7.2",
       "title": "Catalog",
       "section": "7 Physical Design",
-      "sortOrder": 44
+      "sortOrder": 45
     },
     {
       "id": "7.3",
       "title": "Access Structures",
       "section": "7 Physical Design",
-      "sortOrder": 45
+      "sortOrder": 46
     },
     {
       "id": "7.4",
       "title": "Size of Structures",
       "section": "7 Physical Design",
-      "sortOrder": 46
+      "sortOrder": 47
     },
     {
       "id": "7.5",
       "title": "Access Costs",
       "section": "7 Physical Design",
-      "sortOrder": 47
+      "sortOrder": 48
     },
     {
       "id": "7.6",
       "title": "Index Choice",
       "section": "7 Physical Design",
-      "sortOrder": 48
+      "sortOrder": 49
     },
     {
       "id": "8.1",
       "title": "Optimization Phases",
       "section": "8 Query Optimization Phases: Semantic, Syntactic and Physical",
-      "sortOrder": 49
+      "sortOrder": 50
     },
     {
       "id": "8.2",
       "title": "Semantic Optimization",
       "section": "8 Query Optimization Phases: Semantic, Syntactic and Physical",
-      "sortOrder": 50
+      "sortOrder": 51
     },
     {
       "id": "8.3",
       "title": "Syntactic Optimization",
       "section": "8 Query Optimization Phases: Semantic, Syntactic and Physical",
-      "sortOrder": 51
+      "sortOrder": 52
     },
     {
       "id": "8.4",
       "title": "Equivalence Rules",
       "section": "8 Query Optimization Phases: Semantic, Syntactic and Physical",
-      "sortOrder": 52
+      "sortOrder": 53
     },
     {
       "id": "8.5",
       "title": "Physical Optimization",
       "section": "8 Query Optimization Phases: Semantic, Syntactic and Physical",
-      "sortOrder": 53
+      "sortOrder": 54
     },
     {
       "id": "9.1",
       "title": "Intermediate Results",
       "section": "9 Query Optimization Costs: Selection, Sorting and Projection",
-      "sortOrder": 54
+      "sortOrder": 55
     },
     {
       "id": "9.2",
       "title": "Selection",
       "section": "9 Query Optimization Costs: Selection, Sorting and Projection",
-      "sortOrder": 55
+      "sortOrder": 56
     },
     {
       "id": "9.3",
       "title": "Sorting",
       "section": "9 Query Optimization Costs: Selection, Sorting and Projection",
-      "sortOrder": 56
+      "sortOrder": 57
     },
     {
       "id": "9.4",
       "title": "Projection",
       "section": "9 Query Optimization Costs: Selection, Sorting and Projection",
-      "sortOrder": 57
+      "sortOrder": 58
     },
     {
       "id": "10.1",
       "title": "Clustered Structure",
       "section": "10 Query Optimization Costs: Join",
-      "sortOrder": 58
+      "sortOrder": 59
     },
     {
       "id": "10.2",
       "title": "Nested Loops",
       "section": "10 Query Optimization Costs: Join",
-      "sortOrder": 59
+      "sortOrder": 60
     },
     {
       "id": "10.3",
       "title": "Hash-Join",
       "section": "10 Query Optimization Costs: Join",
-      "sortOrder": 60
+      "sortOrder": 61
     },
     {
       "id": "10.4",
       "title": "Sort-Match",
       "section": "10 Query Optimization Costs: Join",
-      "sortOrder": 61
+      "sortOrder": 62
     },
     {
       "id": "10.5",
       "title": "Pipelining",
       "section": "10 Query Optimization Costs: Join",
-      "sortOrder": 62
+      "sortOrder": 63
     },
     {
       "id": "11.1",
       "title": "Tablespaces",
       "section": "11 Parametrization and Tuning",
-      "sortOrder": 63
+      "sortOrder": 64
     },
     {
       "id": "11.2",
       "title": "Parameters",
       "section": "11 Parametrization and Tuning",
-      "sortOrder": 64
+      "sortOrder": 65
     },
     {
       "id": "11.3",
       "title": "Bitmap Indexes",
       "section": "11 Parametrization and Tuning",
-      "sortOrder": 65
+      "sortOrder": 66
     },
     {
       "id": "11.4",
       "title": "Tuning",
       "section": "11 Parametrization and Tuning",
-      "sortOrder": 66
+      "sortOrder": 67
     },
     {
       "id": "11.5",
       "title": "Example of Index Selection",
       "section": "11 Parametrization and Tuning",
-      "sortOrder": 67
+      "sortOrder": 68
     },
     {
       "id": "12.1",
       "title": "Isolation",
       "section": "12 Transactions",
-      "sortOrder": 68
+      "sortOrder": 69
     },
     {
       "id": "12.2",
       "title": "Multi-version Concurrency Control",
       "section": "12 Transactions",
-      "sortOrder": 69
+      "sortOrder": 70
     },
     {
       "id": "12.3",
       "title": "Atomicity and Durability",
       "section": "12 Transactions",
-      "sortOrder": 70
+      "sortOrder": 71
     },
     {
       "id": "12.4",
       "title": "Transaction Chopping",
       "section": "12 Transactions",
-      "sortOrder": 71
+      "sortOrder": 72
     },
     {
       "id": "12.5",
       "title": "Alternative Transaction Manager Architectures",
       "section": "12 Transactions",
-      "sortOrder": 72
+      "sortOrder": 73
     },
     {
       "id": "7.1",
       "title": "7.1",
       "section": "7 ",
-      "sortOrder": 73
+      "sortOrder": 74
     }
   ],
   "questions": [
@@ -10965,6 +10971,518 @@
       ],
       "correctLetter": "A",
       "explicacion": "**Resum ràpid:** Correcta **A (Cert)**: un sistema només de lectures pot prescindir de CC i de recuperació clàssics.\n\n**Explicació detallada:** Sense escriptures no hi ha conflictes WW ni TX a desfer; no calen locks ni WAL d’UNDO/REDO de DML. (Només cal llegir una còpia consistent.)\n\n**Anàlisi de les opcions:** **A Cert**: correcte. **B Fals**: incorrecte.\n\n**Regla per recordar:** Read-only total → fora CC i recovery de writes."
+    },
+    {
+      "id": "q_515",
+      "number": 515,
+      "topicId": "2.1",
+      "text": "¿Què perdem si esborrem una taula que només té l’atribut identificador i una clau forana que l’apunta?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Les seves dades"
+        },
+        {
+          "letter": "B",
+          "text": "Una part del disseny"
+        },
+        {
+          "letter": "C",
+          "text": "La restricció d’integritat"
+        },
+        {
+          "letter": "D",
+          "text": "La seva informació"
+        }
+      ],
+      "correctLetter": "C",
+      "explicacion": null
+    },
+    {
+      "id": "q_516",
+      "number": 516,
+      "topicId": "5.6",
+      "text": "Els embeddings requereixen un tipus de dades especial per que ocupen molt d’espai.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_517",
+      "number": 517,
+      "topicId": "5.6",
+      "text": "Els embeddings sempre es generen en un servei al Cloud, per que requereixen xarxes neuronals molt complexes.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_518",
+      "number": 518,
+      "topicId": "5.6",
+      "text": "Només podem calcular distàncies entre vectors o arrays utilitzant extensions del SGBD com ara PGvector.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_519",
+      "number": 519,
+      "topicId": "5.6",
+      "text": "Utilitzant l’extensió PGvector, podem indexar atributs tipus vector amb un arbre B+ com qualsevol altre atribut.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_520",
+      "number": 520,
+      "topicId": "5.6",
+      "text": "¿Quin és el significat de RAG?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Retrieval Augmented Generation"
+        },
+        {
+          "letter": "B",
+          "text": "Relational Aggregation Graph"
+        },
+        {
+          "letter": "C",
+          "text": "Redundant Archival Garbage"
+        },
+        {
+          "letter": "D",
+          "text": "Replication Ack Gateway"
+        }
+      ],
+      "correctLetter": "A",
+      "explicacion": null
+    },
+    {
+      "id": "q_521",
+      "number": 521,
+      "topicId": "5.6",
+      "text": "El problema més important d’utilitzar un sistema d’emmagatzemament específic per vectors (en comptes d’una extensió d’un SGBD relacional) apareix quan tenim consultes híbrides que requereixen accedir-los els dos.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "A",
+      "explicacion": null
+    },
+    {
+      "id": "q_522",
+      "number": 522,
+      "topicId": "5.4",
+      "text": "En un gestor de documents, podem definir l’esquema que aquests han de seguir.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "A",
+      "explicacion": null
+    },
+    {
+      "id": "q_523",
+      "number": 523,
+      "topicId": "6.1",
+      "text": "¿En quin nivell de l’arquitectura ANSI/SPARC trobem més esquemes?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "External"
+        },
+        {
+          "letter": "B",
+          "text": "Internal"
+        },
+        {
+          "letter": "C",
+          "text": "Conceptual"
+        },
+        {
+          "letter": "D",
+          "text": "Trobem a tots el mateix nombre"
+        }
+      ],
+      "correctLetter": "A",
+      "explicacion": null
+    },
+    {
+      "id": "q_524",
+      "number": 524,
+      "topicId": "6.1",
+      "text": "¿Quina NO és una utilitat de les vistes?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Amagar dades"
+        },
+        {
+          "letter": "B",
+          "text": "Simplificar consultes"
+        },
+        {
+          "letter": "C",
+          "text": "Simplificar el manteniment"
+        },
+        {
+          "letter": "D",
+          "text": "Simplificar esquemes complexos"
+        },
+        {
+          "letter": "E",
+          "text": "Comprovar restriccions d’integritat"
+        }
+      ],
+      "correctLetter": "C",
+      "explicacion": null
+    },
+    {
+      "id": "q_525",
+      "number": 525,
+      "topicId": "6.1",
+      "text": "¿Quin NO és un dels quatre problemes associats a les vistes?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Update through views"
+        },
+        {
+          "letter": "B",
+          "text": "View materialization"
+        },
+        {
+          "letter": "C",
+          "text": "View updating"
+        },
+        {
+          "letter": "D",
+          "text": "Query rewriting"
+        },
+        {
+          "letter": "E",
+          "text": "View expansion"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_526",
+      "number": 526,
+      "topicId": "6.2",
+      "text": "Una vista sempre es pot expandir.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "A",
+      "explicacion": null
+    },
+    {
+      "id": "q_527",
+      "number": 527,
+      "topicId": "6.6",
+      "text": "¿Quina NO és una bona heurística per a triar quines vistes materialitzar en un esquema multidimensional?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Materialitzar una vista si coincideix amb una consulta crítica"
+        },
+        {
+          "letter": "B",
+          "text": "No materialitzar una vista si ja s’ha materialitzat una altra que és un ancestre proper en la jerarquia d’agregació"
+        },
+        {
+          "letter": "C",
+          "text": "Materialitzar els nivells d’agregació més alts"
+        },
+        {
+          "letter": "D",
+          "text": "Materialitzar els nivells d’agregació més baixos"
+        },
+        {
+          "letter": "E",
+          "text": "Totes les heurístiques anteriors són bones"
+        }
+      ],
+      "correctLetter": "E",
+      "explicacion": null
+    },
+    {
+      "id": "q_528",
+      "number": 528,
+      "topicId": "7.3",
+      "text": "Els blocs de la taula contenen metadades.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "False"
+        }
+      ],
+      "correctLetter": "A",
+      "explicacion": null
+    },
+    {
+      "id": "q_529",
+      "number": 529,
+      "topicId": "8.2",
+      "text": "L’optimització semàntica canvia el llenguatge de representació de la consulta.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_530",
+      "number": 530,
+      "topicId": "8.2",
+      "text": "L’optimitzador semàntic sempre troba la millor manera de rescriure una consulta.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_531",
+      "number": 531,
+      "topicId": "8.3",
+      "text": "Les dues regles heurístiques utilitzades a l’optimització sintàctica sempre milloren el cost de la consulta.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_532",
+      "number": 532,
+      "topicId": "9.2",
+      "text": "L’ordre dels atributs en un índex tipus arbre multi-atribut és irrellevant per a les consultes que es puguin fer amb ell.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_533",
+      "number": 533,
+      "topicId": "10.3",
+      "text": "L’algorisme de Hash-join requereix que una de les taules càpigui a memòria.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
+    },
+    {
+      "id": "q_534",
+      "number": 534,
+      "topicId": "10.4",
+      "text": "El cost de l’algorisme de Sort-Match depèn de la comparació de la join.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "A",
+      "explicacion": null
+    },
+    {
+      "id": "q_535",
+      "number": 535,
+      "topicId": "11.4",
+      "text": "¿Què NO forma part de la sortida del procés de millora del rendiment del sistema?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Conjunt d’índexs"
+        },
+        {
+          "letter": "B",
+          "text": "Particionament de les taules"
+        },
+        {
+          "letter": "C",
+          "text": "Conjunt de vistes materialitzades"
+        },
+        {
+          "letter": "D",
+          "text": "Rescriptura de cada consulta (segons els criteris de l’optimització semàntica)"
+        },
+        {
+          "letter": "E",
+          "text": "Normalització/Desnormalització de les taules"
+        }
+      ],
+      "correctLetter": "D",
+      "explicacion": null
+    },
+    {
+      "id": "q_536",
+      "number": 536,
+      "topicId": "12.2",
+      "text": "El control de concurrència multi-versió fa que dues transaccions que s’executin concurrentment puguin llegir dades diferents.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "A",
+      "explicacion": null
+    },
+    {
+      "id": "q_537",
+      "number": 537,
+      "topicId": "12.3",
+      "text": "¿Com evita el SGBD que s’ompli el dietari (log)?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Limitant el nombre d’escriptures al mínim indispensable"
+        },
+        {
+          "letter": "B",
+          "text": "Esborrant-ho i creant-ho de nou a intervals regulars"
+        },
+        {
+          "letter": "C",
+          "text": "Gestionant el fitxer com si fos cíclic"
+        },
+        {
+          "letter": "D",
+          "text": "Dedicant-li un disc de forma exclusiva"
+        }
+      ],
+      "correctLetter": "C",
+      "explicacion": null
+    },
+    {
+      "id": "q_538",
+      "number": 538,
+      "topicId": "12.3",
+      "text": "Si fem backups de forma regular, NO ens cal el dietari (log) per a reconstruir la base de dades.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cert"
+        },
+        {
+          "letter": "B",
+          "text": "Fals"
+        }
+      ],
+      "correctLetter": "B",
+      "explicacion": null
     }
   ]
 }
