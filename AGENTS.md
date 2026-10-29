@@ -1,3 +1,0 @@
-- Fetch and validate updates before changing stored questions.
-- Update question data and version transactionally; preserve answers and sessions, rejecting removal of answered IDs.
-- Keep source and runtime question validators equivalent.
